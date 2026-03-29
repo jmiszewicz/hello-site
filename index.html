@@ -1,11 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="JM Web tworzy szybkie, nowoczesne i wydajne strony internetowe, które pomagają firmom zamieniać odwiedzających w klientów."
+  >
+  <title>JM Web | Usługi Tworzenia Stron WWW</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#" aria-label="Strona główna JM Web">JM Web</a>
+      <nav aria-label="Nawigacja główna">
+        <ul class="nav-list">
+          <li><a href="#start">Start</a></li>
+          <li><a href="#services">Usługi</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="start">
+      <div class="container hero-content">
+        <h1>Nowoczesne strony, które naprawdę konwertują</h1>
+        <p>
+          Tworzymy szybkie, przejrzyste i wydajne strony internetowe, które wzmacniają
+          Twoją markę i zamieniają ruch w realne wyniki biznesowe.
+        </p>
+        <a class="cta-button" href="#contact">Kontakt</a>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Usługi</h2>
+        <div class="services-grid">
+          <details class="service-card">
+            <summary>
+              <h3>Dobrze</h3>
+              <p>Projekt graficzny + kodowanie</p>
+              <span class="expand-button" aria-hidden="true">Rozwiń</span>
+            </summary>
+            <div class="service-details">
+              <p>
+                Otrzymujesz dopracowany projekt graficzny i solidne wdrożenie
+                kodu, dzięki czemu strona wygląda profesjonalnie i działa
+                bezproblemowo.
+              </p>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary>
+              <h3>Szybko</h3>
+              <p>Stylizacja + AI</p>
+              <span class="expand-button" aria-hidden="true">Rozwiń</span>
+            </summary>
+            <div class="service-details">
+              <p>
+                Łączymy sprawną stylizację z narzędziami AI, aby przyspieszyć
+                realizację projektu i szybciej dostarczyć gotową stronę.
+              </p>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary>
+              <h3>Tanio</h3>
+              <p>Praca na szablonie, np. BeTheme</p>
+              <span class="expand-button" aria-hidden="true">Rozwiń</span>
+            </summary>
+            <div class="service-details">
+              <p>
+                Budujemy stronę na sprawdzonym szablonie, takim jak BeTheme, co
+                obniża koszty wejścia i pozwala zachować dobrą jakość wykonania.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-content">
+        <h2>Kontakt</h2>
+        <p>Opisz krótko projekt i wyślij wiadomość. Odpowiem najszybciej, jak to możliwe.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/xaqleovl" method="POST">
+          <input type="hidden" name="_subject" value="Nowe zapytanie ze strony JM Web">
+          <input
+            class="honeycomb"
+            type="text"
+            name="_gotcha"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          >
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Imię i nazwisko</label>
+              <input id="name" name="name" type="text" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="message">Wiadomość</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="rodo_consent" required>
+            <span>
+              Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
+              kontaktu zwrotnego i obsługi zapytania.
+            </span>
+          </label>
+
+          <button class="cta-button form-submit" type="submit">Wyślij zapytanie</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 JM Web. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
 </body>
 </html>
