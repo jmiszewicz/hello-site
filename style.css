@@ -53,6 +53,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 92px;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -676,6 +680,83 @@ h2.section-close {
   margin-top: 1rem;
   min-width: 160px;
   cursor: pointer;
+}
+
+.form-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.form-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 60;
+}
+
+.form-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.form-modal-card {
+  position: relative;
+  width: min(520px, 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1.25rem;
+}
+
+.form-modal-close {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: var(--radius-pill);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.form-modal-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.form-modal-card h3 {
+  margin: 0 0 0.45rem;
+}
+
+.form-modal-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-modal-countdown {
+  margin-top: 0.6rem !important;
+  font-size: 0.9rem;
+}
+
+.form-modal-ok {
+  margin-top: 0.95rem;
+  min-width: 120px;
+  padding: 0.7rem 1rem;
 }
 
 .honeycomb {
