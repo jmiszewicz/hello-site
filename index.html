@@ -3,110 +3,309 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
   <meta
     name="description"
-    content="JM Web tworzy szybkie, nowoczesne i wydajne strony internetowe, które pomagają firmom zamieniać odwiedzających w klientów."
+    content=".jmiszewicz projektuje i tworzy nowoczesne strony internetowe dla firm: UI/UX, kodowanie, SEO techniczne, optymalizacja Core Web Vitals, szybkość i konwersja."
   >
-  <title>JM Web | Usługi Tworzenia Stron WWW</title>
+  <meta
+    name="keywords"
+    content="tworzenie stron internetowych, strony www dla firm, web developer, seo techniczne, optymalizacja core web vitals, wydajność strony, ux ui, konwersja, strony firmowe"
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content=".jmiszewicz | Tworzenie stron WWW + SEO + wydajność">
+  <meta
+    property="og:description"
+    content="Projektuję i wdrażam szybkie strony WWW, które wspierają SEO, widoczność w Google i konwersję. Oferta: {dobrze}, {tanio}, {szybko}."
+  >
+  <meta property="og:image" content="/jm_logo_og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Logo .jmiszewicz">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content=".jmiszewicz | Tworzenie stron WWW + SEO + wydajność">
+  <meta
+    name="twitter:description"
+    content="Nowoczesne strony internetowe dla firm: SEO techniczne, wydajność Core Web Vitals i projekt nastawiony na konwersję."
+  >
+  <meta name="twitter:image" content="/jm_logo_og.png">
+  <meta name="twitter:image:alt" content="Logo .jmiszewicz">
+  <title>.jmiszewicz | Tworzenie Stron WWW, SEO Techniczne, Core Web Vitals</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-content">
-      <a class="logo" href="#" aria-label="Strona główna JM Web">JM Web</a>
+      <a class="jmiszewicz" href="#" aria-label="Strona główna .jmiszewicz">.jmiszewicz</a>
       <nav aria-label="Nawigacja główna">
         <ul class="nav-list">
-          <li><a href="#start">Start</a></li>
-          <li><a href="#services">Usługi</a></li>
-          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="#start">#start</a></li>
+          <li><a href="#services">#usługi</a></li>
+          <li><a href="#contact">#kontakt</a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Przełącz motyw">#FFFFFF</button>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="start">
+    <section class="hero snap-target" id="start">
       <div class="container hero-content">
-        <h1>Nowoczesne strony, które naprawdę konwertują</h1>
+        <p class="hero-kicker">webdev + seo + performance</p>
+        <h1>Lepsza strona, lepsza wydajność<br>Dla Ciebie i&nbsp;Twojej firmy</h1>
         <p>
-          Tworzymy szybkie, przejrzyste i wydajne strony internetowe, które wzmacniają
-          Twoją markę i zamieniają ruch w realne wyniki biznesowe.
+          Zadbaj o swoją stronę, to twoja wizytówka w&nbsp;internecie.
         </p>
-        <a class="cta-button" href="#contact">Kontakt</a>
+        <a class="cta-button" href="#contact">.kontakt</a>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="intro reveal-up" id="intro">
       <div class="container">
-        <h2>Usługi</h2>
+        <h2>.wprowadzenie {</h2>
+        <div class="intro-flow">
+          <article class="intro-item intro-left">
+            <h3>pierwsze_wrażenie_i_wiarygodność</h3>
+            <p>
+              Profesjonalna strona WWW wpływa bezpośrednio na wiarygodność marki,
+              pozyskiwanie klientów oraz widoczność w&nbsp;wyszukiwarce Google. To często
+              pierwszy kontakt użytkownika z&nbsp;firmą - od&nbsp;jej jakości zależy, czy
+              potencjalny klient zostanie, czy przejdzie do konkurencji.
+            </p>
+          </article>
+          <article class="intro-item intro-right">
+            <h3>wydajność_ux_i_seo</h3>
+            <p>
+              Nowoczesne strony internetowe są projektowane nie tylko pod kątem
+              wyglądu, ale przede wszystkim wydajności, użyteczności (UX) oraz
+              optymalizacji SEO. Szybkość ładowania, responsywność (dopasowanie do
+              urządzeń mobilnych), czytelna struktura treści oraz poprawna
+              implementacja techniczna (HTML, CSS, JavaScript) mają realny wpływ na
+              pozycję strony w wynikach wyszukiwania.
+            </p>
+          </article>
+          <article class="intro-item intro-left">
+            <h3>strona_która_pracuje_24_7</h3>
+            <p>
+              Dobrze zaprojektowana strona internetowa pracuje na firmę 24/7 -
+              prezentuje ofertę, buduje zaufanie i wspiera sprzedaż bez konieczności
+              angażowania czasu. Dlatego tworzenie stron internetowych powinno być
+              traktowane jako inwestycja, a&nbsp;nie koszt - szczególnie w kontekście
+              długoterminowego pozycjonowania i&nbsp;rozwoju biznesu online.
+            </p>
+          </article>
+        </div>
+        <h2 class="section-close">}</h2>
+      </div>
+    </section>
+
+    <section class="services reveal-up" id="services">
+      <div class="container services-container">
+        <h2>.usługi {</h2>
+        <p class="services-intro">
+          Zakres tworzenia stron internetowych dopasowywany jest do budżetu oraz
+          celu projektu - od projektowania i kodowania stron od podstaw, przez
+          wdrożenia na&nbsp;bazie szablonów, po rozwiązania ekonomiczne. Każda strona
+          internetowa uwzględnia optymalizację SEO oraz zasady UX.
+        </p>
+        <p class="services-quick-label">na skróty</p>
+        <div class="services-quick reveal-up">
+          <article class="quick-card">
+            <h3>od_zera</h3>
+            <p>projekt + kod + maksymalna wydajność</p>
+          </article>
+          <article class="quick-card">
+            <h3>na_szablonie</h3>
+            <p>dobry balans ceny, czasu i jakości</p>
+          </article>
+          <article class="quick-card">
+            <h3>na_start</h3>
+            <p>szybkie wejście online i podstawa SEO</p>
+          </article>
+        </div>
+        <a class="cta-button services-cta services-cta-quick reveal-up" href="#contact">.zapytaj_o_ofertę</a>
         <div class="services-grid">
-          <details class="service-card">
-            <summary>
-              <h3>Dobrze</h3>
-              <p>Projekt graficzny + kodowanie</p>
-              <span class="expand-button" aria-hidden="true">Rozwiń</span>
-            </summary>
-            <div class="service-details">
-              <p>
-                Otrzymujesz dopracowany projekt graficzny i solidne wdrożenie
-                kodu, dzięki czemu strona wygląda profesjonalnie i działa
-                bezproblemowo.
-              </p>
-            </div>
+          <article class="service-card service-card-main">
+            <p class="service-badge">najlepszy efekt</p>
+            <h3>strona internetowa od podstaw</h3>
+            <p class="service-lead">{projekt graficzny + dedykowany kod}</p>
+            <p class="service-description">
+              Projektowanie i tworzenie stron internetowych od podstaw - z
+              indywidualnym projektem dopasowanym do marki oraz czystym kodem
+              (HTML, CSS, JavaScript). Bez szablonów i builderów.
+            </p>
+            <p class="service-description">
+              Strona zoptymalizowana pod SEO, szybkość działania i urządzenia
+              mobilne (RWD). Poprawna struktura, semantyczny kod i wydajność
+              wspierają widoczność w&nbsp;Google oraz konwersję użytkowników.
+            </p>
+            <ul class="service-points">
+              <li>indywidualny projekt (UX/UI)</li>
+              <li>czysty kod (bez builderów)</li>
+              <li>wysoka wydajność i SEO</li>
+              <li>pełna skalowalność</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <p class="service-badge">najczęściej wybierane</p>
+            <h3>strona internetowa na szablonie</h3>
+            <p class="service-lead">{szybkie wdrożenie + dobry stosunek ceny do jakości}</p>
+            <p class="service-description">
+              Tworzenie stron internetowych w oparciu o gotowe szablony: szybkie
+              wdrożenie strony www, dopasowanie wyglądu oraz optymalizacja pod
+              SEO.
+            </p>
+            <p class="service-description">
+              Strona przygotowana pod wyszukiwarki (nagłówki, meta tagi,
+              struktura treści), zoptymalizowana pod kątem szybkości i urządzeń
+              mobilnych.
+            </p>
+            <ul class="service-points">
+              <li>szybkie wdrożenie</li>
+              <li>niższy koszt</li>
+              <li>sprawdzone rozwiązania</li>
+              <li>dobra baza pod SEO</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>prosta strona internetowa</h3>
+            <p class="service-lead">{budżetowe rozwiązanie + szybkie uruchomienie}</p>
+            <p class="service-description">
+              Tworzenie prostych stron internetowych z wykorzystaniem narzędzi AI
+              i rozwiązań blokowych. Idealne na start lub jako podstawowa
+              obecność w sieci.
+            </p>
+            <p class="service-description">
+              Strona zawiera podstawową optymalizację SEO (nagłówki, meta tagi,
+              struktura), jest dostosowana do urządzeń mobilnych i gotowa do
+              dalszej rozbudowy.
+            </p>
+            <ul class="service-points">
+              <li>najniższy koszt</li>
+              <li>szybkie uruchomienie</li>
+              <li>podstawowe SEO</li>
+              <li>możliwość rozbudowy</li>
+            </ul>
+          </article>
+        </div>
+        <a class="cta-button services-cta services-cta-full" href="#contact">.zamów_wycenę</a>
+        <h2 class="section-close">}</h2>
+      </div>
+    </section>
+
+    <section class="faq reveal-up" id="faq">
+      <div class="container">
+        <h2>.faq {</h2>
+        <p class="faq-intro">
+          Najczęstsze pytania przed startem projektu. Jeśli nie widzisz tutaj odpowiedzi,<br>
+          napisz przez formularz i wrócę z konkretną rekomendacją.
+        </p>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>ile_trwa_realizacja_strony</summary>
+            <p>
+              Najczęściej od 7 do 30 dni roboczych, zależnie od zakresu:
+              liczby podstron, materiałów i poziomu personalizacji.
+            </p>
           </details>
 
-          <details class="service-card">
-            <summary>
-              <h3>Szybko</h3>
-              <p>Stylizacja + AI</p>
-              <span class="expand-button" aria-hidden="true">Rozwiń</span>
-            </summary>
-            <div class="service-details">
-              <p>
-                Łączymy sprawną stylizację z narzędziami AI, aby przyspieszyć
-                realizację projektu i szybciej dostarczyć gotową stronę.
-              </p>
-            </div>
+          <details class="faq-item">
+            <summary>co_jest_potrzebne_na_start</summary>
+            <p>
+              Wystarczy krótki opis firmy, celu strony, preferowanego stylu i
+              dane kontaktowe. Resztę dopracujemy etapami.
+            </p>
           </details>
 
-          <details class="service-card">
-            <summary>
-              <h3>Tanio</h3>
-              <p>Praca na szablonie, np. BeTheme</p>
-              <span class="expand-button" aria-hidden="true">Rozwiń</span>
-            </summary>
-            <div class="service-details">
-              <p>
-                Budujemy stronę na sprawdzonym szablonie, takim jak BeTheme, co
-                obniża koszty wejścia i pozwala zachować dobrą jakość wykonania.
-              </p>
-            </div>
+          <details class="faq-item">
+            <summary>czy_strona_bedzie_szybka</summary>
+            <p>
+              Tak. Każdy projekt optymalizuję pod wydajność, Core Web Vitals i
+              dobrą responsywność na telefonach i desktopie.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>czy_pomagasz_w_seo</summary>
+            <p>
+              Tak, na poziomie technicznym: struktura nagłówków, meta tagi,
+              semantyczny kod, porządek treści i przygotowanie pod indeksację.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>czy_moge_samodzielnie_edytowac_tresc</summary>
+            <p>
+              Tak. W zależności od wybranej opcji przygotowuję prosty workflow
+              edycji treści albo wdrożenie na systemie szablonowym.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>czy_robisz_przebudowe_istniejacych_stron</summary>
+            <p>
+              Tak. Mogę odświeżyć obecną stronę, poprawić UX, wydajność i SEO
+              bez konieczności budowania wszystkiego od zera.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>jak_wyglada_wycena</summary>
+            <p>
+              Po krótkiej analizie zakresu dostajesz jasną wycenę i warianty:
+              {dobrze}, {tanio} lub {szybko}, z opisem co zawiera każdy pakiet.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>czy_zapewniasz_wsparcie_po_wdrozeniu</summary>
+            <p>
+              Tak, mogę prowadzić dalszy rozwój strony, aktualizacje i drobne
+              zmiany, aby serwis był zawsze aktualny i skuteczny.
+            </p>
           </details>
         </div>
+        <h2 class="section-close">}</h2>
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact snap-target reveal-up" id="contact">
       <div class="container contact-content">
-        <h2>Kontakt</h2>
-        <p>Opisz krótko projekt i wyślij wiadomość. Odpowiem najszybciej, jak to możliwe.</p>
+        <h2>.kontakt {</h2>
+        <p>Opisz krótko projekt i wyślij wiadomość. Odpowiem najszybciej, jak&nbsp;to możliwe.</p>
 
         <form class="contact-form" action="https://formspree.io/f/xaqleovl" method="POST">
           <input type="hidden" name="_subject" value="Nowe zapytanie ze strony JM Web">
 
           <div class="form-grid">
             <div class="form-field">
-              <label for="name">Imię i nazwisko</label>
-              <input id="name" name="name" type="text" autocomplete="name" required>
+              <label for="name">_imię</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              >
             </div>
 
             <div class="form-field">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
+              <label for="email">_email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              >
             </div>
 
             <div class="form-field form-field-full">
-              <label for="message">Wiadomość (opcjonalnie)</label>
+              <label for="message">_treść_(opcjonalnie)</label>
               <textarea id="message" name="message" rows="5"></textarea>
             </div>
           </div>
@@ -132,14 +331,110 @@
 
           <button class="cta-button form-submit" type="submit">Wyślij zapytanie</button>
         </form>
+        <h2 class="section-close">}</h2>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 JM Web. Wszelkie prawa zastrzeżone.</p>
+      <p>&copy; 2026 jmiszewicz. Wszelkie prawa zastrzeżone.</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById("theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+
+      if (storedTheme === "light") {
+        root.setAttribute("data-theme", "light");
+      }
+
+      const setButtonLabel = () => {
+        const isLight = root.getAttribute("data-theme") === "light";
+        btn.textContent = isLight ? "#141414" : "#FFFFFF";
+      };
+
+      setButtonLabel();
+
+      btn.addEventListener("click", function () {
+        const isLight = root.getAttribute("data-theme") === "light";
+        if (isLight) {
+          root.removeAttribute("data-theme");
+          localStorage.setItem("theme", "dark");
+        } else {
+          root.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+        }
+        setButtonLabel();
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      const items = document.querySelectorAll(".reveal-up");
+      if (!items.length || !("IntersectionObserver" in window)) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      );
+
+      items.forEach((item) => observer.observe(item));
+    })();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": ".jmiszewicz",
+      "serviceType": "Tworzenie stron internetowych i SEO techniczne",
+      "description": "Tworzenie stron WWW dla firm: projekt UI/UX, kodowanie, optymalizacja wydajności, Core Web Vitals i SEO techniczne.",
+      "email": "kontakt@jmweb.pl",
+      "areaServed": "PL",
+      "url": "/"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ile trwa realizacja strony?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Najczęściej od 7 do 30 dni roboczych, zależnie od zakresu projektu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy pomagasz w SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Wspieram SEO techniczne: struktura, meta tagi, semantyka i przygotowanie pod indeksację."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy strona będzie szybka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, projekty są optymalizowane pod wydajność i Core Web Vitals."
+          }
+        }
+      ]
+    }
+  </script>
 </body>
 </html>
