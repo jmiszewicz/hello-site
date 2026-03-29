@@ -44,13 +44,14 @@
   <link rel="canonical" href="https://jmiszewicz.com/">
   <link rel="alternate" hreflang="pl-PL" href="https://jmiszewicz.com/">
   <link rel="alternate" hreflang="x-default" href="https://jmiszewicz.com/">
+  <link rel="privacy-policy" href="/polityka-prywatnosci.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-content">
-      <a class="jmiszewicz" href="#" aria-label="Strona główna .jmiszewicz">
+      <a class="jmiszewicz" href="/" aria-label="Strona główna .jmiszewicz">
         <img class="jmiszewicz-logo" src="JM_LOGO_FULL.svg" alt=".jmiszewicz">
       </a>
       <nav class="site-nav" id="site-nav" aria-label="Nawigacja główna">
@@ -80,12 +81,18 @@
   </header>
 
   <main>
-    <section class="hero snap-target" id="start">
+    <section class="hero" id="start">
       <div class="container hero-content">
         <p class="hero-kicker">webdev + seo + performance</p>
-        <h1>Lepsza strona, lepsza wydajność<br>Dla Ciebie i&nbsp;Twojej firmy</h1>
+        <h1>
+          <span class="hero-line hero-line-desktop">Lepsza strona, lepsza wydajność<br>dla Ciebie i&nbsp;Twojej firmy</span>
+          <span class="hero-line hero-line-mobile">Lepsza strona,</span>
+          <span class="hero-line hero-line-mobile">lepsza wydajność</span>
+          <span class="hero-line hero-line-mobile">dla Ciebie</span>
+          <span class="hero-line hero-line-mobile">i&nbsp;Twojej firmy</span>
+        </h1>
         <p>
-          Zadbaj o swoją stronę, to twoja wizytówka w&nbsp;internecie.
+          Zadbaj o swoją stronę, to Twoja wizytówka w&nbsp;internecie.
         </p>
         <a class="cta-button" href="#contact">.kontakt</a>
       </div>
@@ -139,7 +146,7 @@
           wdrożenia na&nbsp;bazie szablonów, po rozwiązania ekonomiczne. Każda strona
           internetowa uwzględnia optymalizację SEO oraz zasady UX.
         </p>
-        <p class="services-quick-label">na skróty</p>
+        <p class="services-quick-label">&lt;na skróty&gt;</p>
         <div class="services-quick reveal-up">
           <article class="quick-card">
             <h3>od_zera</h3>
@@ -158,7 +165,7 @@
         <div class="services-grid">
           <article class="service-card service-card-main">
             <p class="service-badge">najlepszy efekt</p>
-            <h3>strona internetowa od podstaw</h3>
+            <h3>Strona Internetowa Od Podstaw</h3>
             <p class="service-lead">{projekt graficzny + dedykowany kod}</p>
             <p class="service-description">
               Projektowanie i tworzenie stron internetowych od podstaw - z
@@ -180,7 +187,7 @@
 
           <article class="service-card">
             <p class="service-badge">najczęściej wybierane</p>
-            <h3>strona internetowa na szablonie</h3>
+            <h3>Strona Internetowa Na Szablonie</h3>
             <p class="service-lead">{szybkie wdrożenie + dobry stosunek ceny do jakości}</p>
             <p class="service-description">
               Tworzenie stron internetowych w oparciu o gotowe szablony: szybkie
@@ -200,8 +207,8 @@
             </ul>
           </article>
 
-          <article class="service-card">
-            <h3>prosta strona internetowa</h3>
+          <article class="service-card service-card-no-badge">
+            <h3>Prosta Strona Internetowa</h3>
             <p class="service-lead">{budżetowe rozwiązanie + szybkie uruchomienie}</p>
             <p class="service-description">
               Tworzenie prostych stron internetowych z wykorzystaniem narzędzi AI
@@ -303,7 +310,7 @@
       </div>
     </section>
 
-    <section class="contact snap-target reveal-up" id="contact">
+    <section class="contact reveal-up" id="contact">
       <div class="container contact-content">
         <h2>.kontakt {</h2>
         <p>Opisz krótko projekt i wyślij wiadomość. Odpowiem najszybciej, jak&nbsp;to możliwe.</p>
@@ -351,11 +358,20 @@
             aria-hidden="true"
           >
 
+          <p class="legal-note">
+            Administratorem danych jest Jakub Miszewicz.
+            Dane z formularza przetwarzam w celu odpowiedzi na zapytanie ofertowe.
+            Pełna informacja o przetwarzaniu danych (podstawa prawna, odbiorcy,
+            transfery, okres przechowywania i Twoje prawa) znajduje się w
+            <a href="/polityka-prywatnosci.html">Polityce prywatności</a>.
+          </p>
+
           <label class="consent">
-            <input type="checkbox" name="rodo_consent" required>
+            <input type="checkbox" name="privacy_notice_ack" required>
             <span>
-              Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
-              kontaktu zwrotnego i obsługi zapytania.
+              Potwierdzam, że zapoznałem(-am) się z
+              <a href="/polityka-prywatnosci.html">Polityką prywatności</a>
+              oraz klauzulą informacyjną.
             </span>
           </label>
 
@@ -369,6 +385,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2026 jmiszewicz. Wszelkie prawa zastrzeżone.</p>
+      <p><a href="/polityka-prywatnosci.html">Polityka prywatności</a></p>
     </div>
   </footer>
 
@@ -464,9 +481,9 @@
       "name": ".jmiszewicz",
       "serviceType": "Tworzenie stron internetowych i SEO techniczne",
       "description": "Tworzenie stron WWW dla firm: projekt UI/UX, kodowanie, optymalizacja wydajności, Core Web Vitals i SEO techniczne.",
-      "email": "kontakt@jmweb.pl",
+      "email": "jmiszewicz+politykaprywatosci@gmail.com",
       "areaServed": "PL",
-      "url": "/"
+      "url": "https://jmiszewicz.com/"
     }
   </script>
   <script type="application/ld+json">
