@@ -53,14 +53,29 @@
       <a class="jmiszewicz" href="#" aria-label="Strona główna .jmiszewicz">
         <img class="jmiszewicz-logo" src="JM_LOGO_FULL.svg" alt=".jmiszewicz">
       </a>
-      <nav aria-label="Nawigacja główna">
+      <nav class="site-nav" id="site-nav" aria-label="Nawigacja główna">
         <ul class="nav-list">
-          <li><a href="#start">#start</a></li>
-          <li><a href="#services">#usługi</a></li>
-          <li><a href="#contact">#kontakt</a></li>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#services">Usługi</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+          <li class="mobile-theme-item">
+            <button class="theme-toggle mobile-theme-toggle" id="theme-toggle-mobile" type="button" aria-label="Przełącz motyw">#FFFFFF</button>
+          </li>
         </ul>
       </nav>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Przełącz motyw">#FFFFFF</button>
+      <div class="header-actions">
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Otwórz menu"
+        >
+          Menu
+        </button>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Przełącz motyw">#FFFFFF</button>
+      </div>
     </div>
   </header>
 
@@ -361,6 +376,9 @@
     (function () {
       const root = document.documentElement;
       const btn = document.getElementById("theme-toggle");
+      const mobileBtn = document.getElementById("theme-toggle-mobile");
+      const menuBtn = document.getElementById("menu-toggle");
+      const siteNav = document.getElementById("site-nav");
       const storedTheme = localStorage.getItem("theme");
 
       if (storedTheme === "light") {
@@ -369,7 +387,11 @@
 
       const setButtonLabel = () => {
         const isLight = root.getAttribute("data-theme") === "light";
-        btn.textContent = isLight ? "#141414" : "#FFFFFF";
+        const label = isLight ? "#141414" : "#FFFFFF";
+        btn.textContent = label;
+        if (mobileBtn) {
+          mobileBtn.textContent = label;
+        }
       };
 
       setButtonLabel();
@@ -385,6 +407,34 @@
         }
         setButtonLabel();
       });
+
+      if (mobileBtn) {
+        mobileBtn.addEventListener("click", function () {
+          btn.click();
+        });
+      }
+
+      if (menuBtn && siteNav) {
+        const closeMenu = () => {
+          siteNav.classList.remove("is-open");
+          menuBtn.setAttribute("aria-expanded", "false");
+        };
+
+        menuBtn.addEventListener("click", function () {
+          const isOpen = siteNav.classList.toggle("is-open");
+          menuBtn.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        siteNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 860) {
+            closeMenu();
+          }
+        });
+      }
     })();
   </script>
   <script>
