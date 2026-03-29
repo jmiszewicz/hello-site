@@ -95,11 +95,20 @@ a {
 }
 
 .jmiszewicz {
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
+}
+
+.jmiszewicz-logo {
+  display: block;
+  width: auto;
+  height: clamp(32px, 4vw, 44px);
+}
+
+:root[data-theme="light"] .jmiszewicz-logo {
+  filter: brightness(0) saturate(100%);
 }
 
 .nav-list {
