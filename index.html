@@ -10,11 +10,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta
     name="description"
-    content="jmiszewicz projektuje i tworzy strony www dla firm: konsultacja, projekt, wdrożenie, SEO techniczne i optymalizacja Core Web Vitals."
-  >
-  <meta
-    name="keywords"
-    content="tworzenie stron internetowych, strony www dla firm, web developer, seo techniczne, optymalizacja core web vitals, wydajność strony, ux ui, konwersja, strony firmowe"
+    content="Nowoczesne strony internetowe - od projektu po wdrożenie | SEO | CWV | jmiszewicz"
   >
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
@@ -25,8 +21,8 @@
     property="og:description"
     content="konsultacja, projekt, wdrożenie, SEO support, CWV dopasowane do potrzeb klienta"
   >
-  <meta property="og:image" content="https://jmiszewicz.com/jm_logo_og_20260329.png">
-  <meta property="og:image:secure_url" content="https://jmiszewicz.com/jm_logo_og_20260329.png">
+  <meta property="og:image" content="https://jmiszewicz.com/assets/og-image.png">
+  <meta property="og:image:secure_url" content="https://jmiszewicz.com/assets/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -38,21 +34,32 @@
     name="twitter:description"
     content="konsultacja, projekt, wdrożenie, SEO support, CWV dopasowane do potrzeb klienta"
   >
-  <meta name="twitter:image" content="https://jmiszewicz.com/jm_logo_og_20260329.png">
+  <meta name="twitter:image" content="https://jmiszewicz.com/assets/og-image.png">
   <meta name="twitter:image:alt" content="Logo jmiszewicz">
-  <title>jmiszewicz - strony www, SEO techniczne, Core Web Vitals</title>
+  <title>Twój deweloper WWW | Strony internetowe i wydajność</title>
   <link rel="canonical" href="https://jmiszewicz.com/">
   <link rel="alternate" hreflang="pl-PL" href="https://jmiszewicz.com/">
   <link rel="alternate" hreflang="x-default" href="https://jmiszewicz.com/">
-  <link rel="privacy-policy" href="/polityka-prywatnosci.html">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-canvas" aria-hidden="true">
+    <div class="site-canvas-veil site-canvas-veil-top"></div>
+    <div class="site-canvas-veil site-canvas-veil-mid"></div>
+    <div class="site-canvas-veil site-canvas-veil-bottom"></div>
+    <div class="site-canvas-grid"></div>
+    <div class="site-canvas-orb site-canvas-orb-a"></div>
+    <div class="site-canvas-orb site-canvas-orb-b"></div>
+    <div class="site-canvas-orb site-canvas-orb-c"></div>
+  </div>
   <header class="site-header">
     <div class="container header-content">
       <a class="jmiszewicz" href="/" aria-label="Strona główna jmiszewicz">
-        <img class="jmiszewicz-logo" src="JM_LOGO_FULL.svg" alt="jmiszewicz">
+        <img class="jmiszewicz-logo" src="/assets/logo-full.svg" alt="jmiszewicz">
       </a>
       <nav class="site-nav" id="site-nav" aria-label="Nawigacja główna">
         <ul class="nav-list">
@@ -98,46 +105,73 @@
       </div>
     </section>
 
-    <section class="intro reveal-up" id="intro">
+    <section class="intro" id="intro">
       <div class="container">
         <h2>.wprowadzenie {</h2>
         <div class="intro-flow">
-          <article class="intro-item intro-left">
-            <h3>pierwsze_wrażenie_i_wiarygodność</h3>
-            <p>
-              Profesjonalna strona WWW wpływa bezpośrednio na wiarygodność marki,
-              pozyskiwanie klientów oraz widoczność w&nbsp;wyszukiwarce Google. To często
-              pierwszy kontakt użytkownika z&nbsp;firmą - od&nbsp;jej jakości zależy, czy
-              potencjalny klient zostanie, czy przejdzie do konkurencji.
-            </p>
-          </article>
-          <article class="intro-item intro-right">
-            <h3>wydajność_ux_i_seo</h3>
-            <p>
-              Nowoczesne strony internetowe są projektowane nie tylko pod kątem
-              wyglądu, ale przede wszystkim wydajności, użyteczności (UX) oraz
-              optymalizacji SEO. Szybkość ładowania, responsywność (dopasowanie do
-              urządzeń mobilnych), czytelna struktura treści oraz poprawna
-              implementacja techniczna (HTML, CSS, JavaScript) mają realny wpływ na
-              pozycję strony w wynikach wyszukiwania.
-            </p>
-          </article>
-          <article class="intro-item intro-left">
-            <h3>strona_która_pracuje_24_7</h3>
-            <p>
-              Dobrze zaprojektowana strona internetowa pracuje na firmę 24/7 -
-              prezentuje ofertę, buduje zaufanie i wspiera sprzedaż bez konieczności
-              angażowania czasu. Dlatego tworzenie stron internetowych powinno być
-              traktowane jako inwestycja, a&nbsp;nie koszt - szczególnie w kontekście
-              długoterminowego pozycjonowania i&nbsp;rozwoju biznesu online.
-            </p>
-          </article>
+          <div class="intro-row intro-row-left">
+            <div class="intro-shell">
+              <div class="intro-visual intro-visual-trust" aria-hidden="true">
+                <img src="assets/pierwsze-wrazenie.svg" alt="" loading="lazy">
+              </div>
+              <article class="intro-item intro-left">
+                <div class="intro-copy">
+                  <h3>pierwsze_wrażenie_i_wiarygodność</h3>
+                  <p>
+                    Profesjonalna strona WWW wpływa bezpośrednio na wiarygodność marki,
+                    pozyskiwanie klientów oraz widoczność w&nbsp;wyszukiwarce Google. To często
+                    pierwszy kontakt użytkownika z&nbsp;firmą - od&nbsp;jej jakości zależy, czy
+                    potencjalny klient zostanie, czy przejdzie do konkurencji.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="intro-row intro-row-right">
+            <div class="intro-shell">
+              <div class="intro-visual intro-visual-performance" aria-hidden="true">
+                <img src="assets/wydajnosc.svg" alt="" loading="lazy">
+              </div>
+              <article class="intro-item intro-right">
+                <div class="intro-copy">
+                  <h3>wydajność_ux_i_seo</h3>
+                  <p>
+                    Nowoczesne strony internetowe są projektowane nie tylko pod kątem
+                    wyglądu, ale przede wszystkim wydajności, użyteczności (UX) oraz
+                    optymalizacji SEO. Szybkość ładowania, responsywność (dopasowanie do
+                    urządzeń mobilnych), czytelna struktura treści oraz poprawna
+                    implementacja techniczna (HTML, CSS, JavaScript) mają realny wpływ na
+                    pozycję strony w wynikach wyszukiwania.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="intro-row intro-row-left">
+            <div class="intro-shell">
+              <div class="intro-visual intro-visual-uptime" aria-hidden="true">
+                <img src="assets/24h.svg" alt="" loading="lazy">
+              </div>
+              <article class="intro-item intro-left">
+                <div class="intro-copy">
+                  <h3>strona_która_pracuje_24_7</h3>
+                  <p>
+                    Dobrze zaprojektowana strona internetowa pracuje na firmę 24/7 -
+                    prezentuje ofertę, buduje zaufanie i wspiera sprzedaż bez konieczności
+                    angażowania czasu. Dlatego tworzenie stron internetowych powinno być
+                    traktowane jako inwestycja, a&nbsp;nie koszt - szczególnie w kontekście
+                    długoterminowego pozycjonowania i&nbsp;rozwoju biznesu online.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
         <h2 class="section-close">}</h2>
       </div>
     </section>
 
-    <section class="services reveal-up" id="services">
+    <section class="services" id="services">
       <div class="container services-container">
         <h2>.usługi {</h2>
         <p class="services-intro">
@@ -147,7 +181,7 @@
           internetowa uwzględnia optymalizację SEO oraz zasady UX.
         </p>
         <p class="services-quick-label">&lt;na skróty&gt;</p>
-        <div class="services-quick reveal-up">
+        <div class="services-quick">
           <article class="quick-card">
             <h3>od_zera</h3>
             <p>projekt + kod + maksymalna wydajność</p>
@@ -161,7 +195,7 @@
             <p>szybkie wejście online i podstawa SEO</p>
           </article>
         </div>
-        <a class="cta-button services-cta services-cta-quick reveal-up" href="#contact">.zapytaj_o_ofertę</a>
+        <a class="cta-button services-cta services-cta-quick" href="#contact">.zapytaj_o_ofertę</a>
         <div class="services-grid">
           <article class="service-card service-card-main">
             <p class="service-badge">najlepszy efekt</p>
@@ -233,7 +267,7 @@
       </div>
     </section>
 
-    <section class="faq reveal-up" id="faq">
+    <section class="faq" id="faq">
       <div class="container">
         <h2>.faq {</h2>
         <p class="faq-intro">
@@ -310,7 +344,7 @@
       </div>
     </section>
 
-    <section class="contact reveal-up" id="contact">
+    <section class="contact" id="contact">
       <div class="container contact-content">
         <h2>.kontakt {</h2>
         <p>Opisz krótko projekt i wyślij wiadomość. Odpowiem najszybciej, jak&nbsp;to możliwe.</p>
@@ -320,30 +354,32 @@
 
           <div class="form-grid">
             <div class="form-field">
-              <label for="name">_imię</label>
               <input
                 id="name"
                 name="name"
                 type="text"
+                placeholder=" "
                 autocomplete="name"
                 required
               >
+              <label for="name">_imię</label>
             </div>
 
             <div class="form-field">
-              <label for="email">_email</label>
               <input
                 id="email"
                 name="email"
                 type="email"
+                placeholder=" "
                 autocomplete="email"
                 required
               >
+              <label for="email">_email</label>
             </div>
 
             <div class="form-field form-field-full">
+              <textarea id="message" name="message" rows="5" placeholder=" "></textarea>
               <label for="message">_treść_(opcjonalnie)</label>
-              <textarea id="message" name="message" rows="5"></textarea>
             </div>
           </div>
 
@@ -358,22 +394,24 @@
             aria-hidden="true"
           >
 
-          <p class="legal-note">
-            Administratorem danych jest Jakub Miszewicz.
-            Dane z formularza przetwarzam w celu odpowiedzi na zapytanie ofertowe.
-            Pełna informacja o przetwarzaniu danych (podstawa prawna, odbiorcy,
-            transfery, okres przechowywania i Twoje prawa) znajduje się w
-            <a href="/polityka-prywatnosci.html">Polityce prywatności</a>.
-          </p>
+          <div class="form-meta">
+            <p class="legal-note">
+              Administratorem danych jest Jakub Miszewicz.
+              Dane z formularza przetwarzam w celu odpowiedzi na zapytanie ofertowe.
+              Pełna informacja o przetwarzaniu danych (podstawa prawna, odbiorcy,
+              transfery, okres przechowywania i Twoje prawa) znajduje się w
+              <a href="/polityka-prywatnosci.html">Polityce prywatności</a>.
+            </p>
 
-          <label class="consent">
-            <input type="checkbox" name="privacy_notice_ack" required>
-            <span>
-              Potwierdzam, że zapoznałem(-am) się z
-              <a href="/polityka-prywatnosci.html">Polityką prywatności</a>
-              oraz klauzulą informacyjną.
-            </span>
-          </label>
+            <label class="consent">
+              <input type="checkbox" name="privacy_notice_ack" required>
+              <span>
+                Potwierdzam, że zapoznałem(-am) się z
+                <a href="/polityka-prywatnosci.html">Polityką prywatności</a>
+                oraz klauzulą informacyjną.
+              </span>
+            </label>
+          </div>
 
           <button class="cta-button form-submit" type="submit">Wyślij zapytanie</button>
         </form>
@@ -403,6 +441,91 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let rafId = 0;
+      let currentShift = 0;
+      let currentDrift = 0;
+      let currentProgress = 0;
+      let targetShift = 0;
+      let targetDrift = 0;
+      let targetProgress = 0;
+
+      const setCanvasVars = (progress, shift, drift) => {
+        root.style.setProperty("--scroll-progress", progress.toFixed(4));
+        root.style.setProperty("--scroll-shift", `${shift.toFixed(2)}px`);
+        root.style.setProperty("--scroll-drift", `${drift.toFixed(2)}px`);
+      };
+
+      const readTargets = () => {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+        const progress = Math.min(scrollTop / maxScroll, 1);
+
+        targetProgress = progress;
+        targetShift = scrollTop * 0.52;
+        targetDrift = Math.sin(progress * Math.PI * 2) * 46;
+      };
+
+      const stopLoop = () => {
+        if (!rafId) return;
+        window.cancelAnimationFrame(rafId);
+        rafId = 0;
+      };
+
+      const animateCanvas = () => {
+        const ease = 0.075;
+
+        currentProgress += (targetProgress - currentProgress) * ease;
+        currentShift += (targetShift - currentShift) * ease;
+        currentDrift += (targetDrift - currentDrift) * ease;
+
+        setCanvasVars(currentProgress, currentShift, currentDrift);
+
+        const settled =
+          Math.abs(targetProgress - currentProgress) < 0.0005 &&
+          Math.abs(targetShift - currentShift) < 0.35 &&
+          Math.abs(targetDrift - currentDrift) < 0.35;
+
+        if (settled) {
+          currentProgress = targetProgress;
+          currentShift = targetShift;
+          currentDrift = targetDrift;
+          setCanvasVars(currentProgress, currentShift, currentDrift);
+          rafId = 0;
+          return;
+        }
+
+        rafId = window.requestAnimationFrame(animateCanvas);
+      };
+
+      const requestTick = () => {
+        if (reduceMotion.matches) {
+          stopLoop();
+          currentProgress = 0;
+          currentShift = 0;
+          currentDrift = 0;
+          targetProgress = 0;
+          targetShift = 0;
+          targetDrift = 0;
+          setCanvasVars(0, 0, 0);
+          return;
+        }
+
+        readTargets();
+
+        if (rafId) return;
+        rafId = window.requestAnimationFrame(animateCanvas);
+      };
+
+      requestTick();
+      window.addEventListener("scroll", requestTick, { passive: true });
+      window.addEventListener("resize", requestTick);
+      reduceMotion.addEventListener("change", requestTick);
+    })();
+  </script>
   <script>
     (function () {
       const root = document.documentElement;
@@ -470,8 +593,37 @@
   </script>
   <script>
     (function () {
-      const items = document.querySelectorAll(".reveal-up");
+      const selectors = [
+        ".intro h2",
+        ".intro-row",
+        ".intro .section-close",
+        ".services h2",
+        ".services-intro",
+        ".services-quick-label",
+        ".quick-card",
+        ".services-cta",
+        ".service-card",
+        ".services .section-close",
+        ".faq h2",
+        ".faq-intro",
+        ".faq-item",
+        ".faq .section-close",
+        ".contact h2",
+        ".contact-content > p",
+        ".form-field",
+        ".legal-note",
+        ".consent",
+        ".form-submit",
+        ".contact .section-close"
+      ];
+      const items = document.querySelectorAll(selectors.join(", "));
+
       if (!items.length || !("IntersectionObserver" in window)) return;
+
+      items.forEach((item, index) => {
+        item.classList.add("reveal-up");
+        item.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 90}ms`);
+      });
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -581,8 +733,8 @@
       "name": "jmiszewicz",
       "alternateName": ".jmiszewicz",
       "url": "https://jmiszewicz.com/",
-      "logo": "https://jmiszewicz.com/jm_logo_og_20260329.png",
-      "image": "https://jmiszewicz.com/jm_logo_og_20260329.png",
+      "logo": "https://jmiszewicz.com/assets/og-image.png",
+      "image": "https://jmiszewicz.com/assets/og-image.png",
       "email": "jmiszewicz+politykaprywatosci@gmail.com"
     }
   </script>
@@ -598,7 +750,7 @@
       "email": "jmiszewicz+politykaprywatosci@gmail.com",
       "areaServed": "PL",
       "url": "https://jmiszewicz.com/",
-      "image": "https://jmiszewicz.com/jm_logo_og_20260329.png",
+      "image": "https://jmiszewicz.com/assets/og-image.png",
       "provider": {
         "@id": "https://jmiszewicz.com/#organization"
       }
