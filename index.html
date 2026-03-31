@@ -261,52 +261,8 @@
         </div>
         <a class="cta-button services-cta services-cta-quick" href="#contact">.zapytaj_o_ofertę</a>
         <div class="services-grid">
-          <article class="service-card service-card-main">
-            <p class="service-badge">najlepszy efekt</p>
-            <h3>Strona Internetowa Od Podstaw</h3>
-            <p class="service-lead">{projekt graficzny + dedykowany kod}</p>
-            <p class="service-description">
-              Projektowanie i tworzenie stron internetowych od podstaw - z
-              indywidualnym projektem dopasowanym do marki oraz czystym kodem
-              (HTML, CSS, JavaScript). Bez szablonów i builderów.
-            </p>
-            <p class="service-description">
-              Strona zoptymalizowana pod SEO, szybkość działania i urządzenia
-              mobilne (RWD). Poprawna struktura, semantyczny kod i wydajność
-              wspierają widoczność w&nbsp;Google oraz konwersję użytkowników.
-            </p>
-            <ul class="service-points">
-              <li>indywidualny projekt (UX/UI)</li>
-              <li>czysty kod (bez builderów)</li>
-              <li>wysoka wydajność i SEO</li>
-              <li>pełna skalowalność</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <p class="service-badge">najczęściej wybierane</p>
-            <h3>Strona Internetowa Na Szablonie</h3>
-            <p class="service-lead">{szybkie wdrożenie + dobry stosunek ceny do jakości}</p>
-            <p class="service-description">
-              Tworzenie stron internetowych w oparciu o gotowe szablony: szybkie
-              wdrożenie strony www, dopasowanie wyglądu oraz optymalizacja pod
-              SEO.
-            </p>
-            <p class="service-description">
-              Strona przygotowana pod wyszukiwarki (nagłówki, meta tagi,
-              struktura treści), zoptymalizowana pod kątem szybkości i urządzeń
-              mobilnych.
-            </p>
-            <ul class="service-points">
-              <li>szybkie wdrożenie</li>
-              <li>niższy koszt</li>
-              <li>sprawdzone rozwiązania</li>
-              <li>dobra baza pod SEO</li>
-            </ul>
-          </article>
-
           <article class="service-card service-card-no-badge">
-            <h3>Prosta Strona Internetowa</h3>
+            <h3>na_start</h3>
             <p class="service-lead">{budżetowe rozwiązanie + szybkie uruchomienie}</p>
             <p class="service-description">
               Tworzenie prostych stron internetowych z wykorzystaniem narzędzi AI
@@ -324,9 +280,55 @@
               <li>podstawowe SEO</li>
               <li>możliwość rozbudowy</li>
             </ul>
+            <button class="cta-button wybieram-btn" type="button" data-service="na_start">wybieram</button>
+          </article>
+
+          <article class="service-card">
+            <p class="service-badge">najczęściej wybierane</p>
+            <h3>na_szablonie</h3>
+            <p class="service-lead">{szybkie wdrożenie + dobry stosunek ceny do jakości}</p>
+            <p class="service-description">
+              Tworzenie stron internetowych w oparciu o gotowe szablony: szybkie
+              wdrożenie strony www, dopasowanie wyglądu oraz optymalizacja pod
+              SEO.
+            </p>
+            <p class="service-description">
+              Strona przygotowana pod wyszukiwarki (nagłówki, meta tagi,
+              struktura treści), zoptymalizowana pod kątem szybkości i urządzeń
+              mobilnych.
+            </p>
+            <ul class="service-points">
+              <li>szybkie wdrożenie</li>
+              <li>niższy koszt</li>
+              <li>sprawdzone rozwiązania</li>
+              <li>dobra baza pod SEO</li>
+            </ul>
+            <button class="cta-button wybieram-btn" type="button" data-service="na_szablonie">wybieram</button>
+          </article>
+
+          <article class="service-card service-card-main">
+            <p class="service-badge">najlepszy efekt</p>
+            <h3>od_podstaw</h3>
+            <p class="service-lead">{projekt graficzny + dedykowany kod}</p>
+            <p class="service-description">
+              Projektowanie i tworzenie stron internetowych od podstaw - z
+              indywidualnym projektem dopasowanym do marki oraz czystym kodem
+              (HTML, CSS, JavaScript). Bez szablonów i builderów.
+            </p>
+            <p class="service-description">
+              Strona zoptymalizowana pod SEO, szybkość działania i urządzenia
+              mobilne (RWD). Poprawna struktura, semantyczny kod i wydajność
+              wspierają widoczność w&nbsp;Google oraz konwersję użytkowników.
+            </p>
+            <ul class="service-points">
+              <li>indywidualny projekt (UX/UI)</li>
+              <li>czysty kod (bez builderów)</li>
+              <li>wysoka wydajność i SEO</li>
+              <li>pełna skalowalność</li>
+            </ul>
+            <button class="cta-button wybieram-btn" type="button" data-service="od_podstaw">wybieram</button>
           </article>
         </div>
-        <a class="cta-button services-cta services-cta-full" href="#contact">.zamów_wycenę</a>
         <h2 class="section-close">}</h2>
       </div>
     </section>
@@ -827,6 +829,72 @@
           submitBtn.disabled = false;
           submitBtn.textContent = initialBtnText;
         }
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll(".wybieram-btn");
+      const messageField = document.getElementById("message");
+
+      const specialChars = "!@#$%^&*=+-";
+      const decodeSteps = 3; // Number of scrambled versions per character
+      const stepDelay = 5; // ms between each scramble step
+      
+      const typewriterEffect = (element, text, speed = 60) => {
+        element.value = "";
+        element.classList.remove("typewriter");
+        
+        let currentIndex = 0;
+        let displayText = [];
+        
+        const revealChar = () => {
+          if (currentIndex < text.length) {
+            const targetChar = text[currentIndex];
+            let scrambleIndex = 0;
+            
+            // Animate the character being decoded
+            const scrambleInterval = setInterval(() => {
+              if (scrambleIndex < decodeSteps) {
+                // Show random special character
+                displayText[currentIndex] = specialChars[Math.floor(Math.random() * specialChars.length)];
+                element.value = displayText.join("");
+                scrambleIndex++;
+              } else {
+                // Reveal the actual character
+                displayText[currentIndex] = targetChar;
+                element.value = displayText.join("");
+                clearInterval(scrambleInterval);
+                
+                // Move to next character
+                currentIndex++;
+                setTimeout(revealChar, speed);
+              }
+            }, stepDelay);
+          } else {
+            element.classList.remove("typewriter");
+          }
+        };
+        
+        element.classList.add("typewriter");
+        revealChar();
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const serviceName = this.getAttribute("data-service");
+          const message = `Interesuje mnie pakiet ${serviceName}. Proszę o kontakt.`;
+          
+          if (messageField) {
+            typewriterEffect(messageField, message);
+            messageField.focus();
+          }
+          
+          const contactSection = document.getElementById("contact");
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+          }
+        });
       });
     })();
   </script>
