@@ -700,6 +700,112 @@ h2.section-close {
   color: var(--muted);
 }
 
+.services-compare {
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.services-compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.services-matrix {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.services-matrix caption {
+  caption-side: top;
+  padding: 1rem 1.2rem 0.5rem;
+  text-align: left;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.services-matrix th,
+.services-matrix td {
+  padding: 0.9rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.services-matrix thead th {
+  border-top: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.services-matrix thead th:first-child,
+.services-matrix tbody th {
+  text-align: left;
+}
+
+.services-matrix tbody th {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.services-matrix td {
+  text-align: center;
+}
+
+.services-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.services-mark-positive {
+  color: #ffffff;
+  background-color: var(--accent);
+  border-color: transparent;
+}
+
+.services-mark-optional {
+  color: var(--accent);
+  background-color: rgba(44, 108, 148, 0.1);
+  border-color: rgba(44, 108, 148, 0.35);
+}
+
+.services-mark-negative {
+  color: var(--muted);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.services-matrix-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 1.2rem 1.1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.services-matrix-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
 .services-cta {
   margin-top: var(--space-lg);
 }
