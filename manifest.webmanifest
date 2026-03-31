@@ -1,21 +1,26 @@
 {
   "id": "/",
-  "name": "jmiszewicz",
+  "name": "jmiszewicz - strony internetowe i SEO",
   "short_name": "jmiszewicz",
+  "description": "Tworzenie nowoczesnych stron internetowych, optymalizacja SEO i Core Web Vitals",
   "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/assets/favicon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/assets/favicon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "theme_color": "#141414",
   "background_color": "#141414",
-  "display": "standalone"
+  "display": "minimal-ui",
+  "categories": ["business", "services"]
 }

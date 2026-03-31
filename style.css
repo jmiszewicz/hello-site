@@ -1,4 +1,7 @@
 ﻿:root {
+  --bp-sm: 640px;
+  --bp-md: 860px;
+  --bp-lg: 1024px;
   --bg: #141414;
   --text: #ffffff;
   --muted: #d0d0d0;
@@ -70,6 +73,23 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 999;
+  padding: 0.75rem 1rem;
+  background-color: var(--accent);
+  color: var(--bg);
+  border-radius: var(--radius-sm);
+  text-decoration: underline;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  left: 1rem;
 }
 
 .container {
@@ -837,17 +857,6 @@ h2.section-close {
   .services-mark {
     font-size: 1rem;
   }
-}
-  padding: 1rem 1.2rem 1.1rem;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.services-matrix-legend span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
 }
 
 .services-cta {

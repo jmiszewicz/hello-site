@@ -26,7 +26,7 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Logo jmiszewicz">
+  <meta property="og:image:alt" content="jmiszewicz - strony internetowe, SEO i Core Web Vitals">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://jmiszewicz.com/">
   <meta name="twitter:title" content="jmiszewicz - strony www">
@@ -35,7 +35,7 @@
     content="konsultacja, projekt, wdrożenie, SEO support, CWV dopasowane do potrzeb klienta"
   >
   <meta name="twitter:image" content="https://jmiszewicz.com/assets/og-image.png">
-  <meta name="twitter:image:alt" content="Logo jmiszewicz">
+  <meta name="twitter:image:alt" content="jmiszewicz - strony internetowe, SEO i Core Web Vitals">
   <title>Twój deweloper WWW | Strony internetowe i wydajność</title>
   <link rel="canonical" href="https://jmiszewicz.com/">
   <link rel="alternate" hreflang="pl-PL" href="https://jmiszewicz.com/">
@@ -47,6 +47,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a href="#main" class="skip-link">Przejdź do głównej treści</a>
   <div class="site-canvas" aria-hidden="true">
     <div class="site-canvas-veil site-canvas-veil-top"></div>
     <div class="site-canvas-veil site-canvas-veil-mid"></div>
@@ -87,7 +88,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" id="start">
       <div class="container hero-content">
         <p class="hero-kicker">webdev + seo + performance</p>
@@ -441,6 +442,7 @@
                 type="text"
                 placeholder=" "
                 autocomplete="name"
+                aria-required="true"
                 required
               >
               <label for="name">_imię</label>
@@ -453,13 +455,14 @@
                 type="email"
                 placeholder=" "
                 autocomplete="email"
+                aria-required="true"
                 required
               >
               <label for="email">_email</label>
             </div>
 
             <div class="form-field form-field-full">
-              <textarea id="message" name="message" rows="5" placeholder=" "></textarea>
+              <textarea id="message" name="message" rows="5" placeholder=" " aria-required="false"></textarea>
               <label for="message">_treść_(opcjonalnie)</label>
             </div>
           </div>

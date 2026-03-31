@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+
+Crawl-delay: 1
 
 Sitemap: https://jmiszewicz.com/sitemap.xml
