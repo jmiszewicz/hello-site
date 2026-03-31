@@ -833,13 +833,14 @@
     })();
   </script>
   <script>
-    (function () {
+        (function () {
       const buttons = document.querySelectorAll(".wybieram-btn");
       const messageField = document.getElementById("message");
 
       const specialChars = "!@#$%^&*=+-";
-      const decodeSteps = 3; // Number of scrambled versions per character
-      const stepDelay = 5; // ms between each scramble step
+      const decodeSteps = 4; // Number of scrambled versions per character
+      const stepDelay = 40; // ms between each scramble step
+      const parallelChars = 3; // ← ZMIEŃ TĘ LICZBĘ (1, 2, 3, 4, 5...)
       
       const typewriterEffect = (element, text, speed = 60) => {
         element.value = "";
@@ -848,36 +849,46 @@
         let currentIndex = 0;
         let displayText = [];
         
-        const revealChar = () => {
-          if (currentIndex < text.length) {
-            const targetChar = text[currentIndex];
-            let scrambleIndex = 0;
-            
-            // Animate the character being decoded
-            const scrambleInterval = setInterval(() => {
-              if (scrambleIndex < decodeSteps) {
-                // Show random special character
-                displayText[currentIndex] = specialChars[Math.floor(Math.random() * specialChars.length)];
-                element.value = displayText.join("");
-                scrambleIndex++;
-              } else {
-                // Reveal the actual character
-                displayText[currentIndex] = targetChar;
-                element.value = displayText.join("");
-                clearInterval(scrambleInterval);
-                
-                // Move to next character
-                currentIndex++;
-                setTimeout(revealChar, speed);
-              }
-            }, stepDelay);
-          } else {
-            element.classList.remove("typewriter");
+        const revealChars = () => {
+          // Decode up to parallelChars characters at once
+          const charsToReveal = [];
+          for (let i = 0; i < parallelChars && currentIndex + i < text.length; i++) {
+            charsToReveal.push(currentIndex + i);
           }
+          
+          if (charsToReveal.length === 0) {
+            element.classList.remove("typewriter");
+            return;
+          }
+          
+          let scrambleIndex = 0;
+          
+          // Animate all characters being decoded in parallel
+          const scrambleInterval = setInterval(() => {
+            if (scrambleIndex < decodeSteps) {
+              // Show random special characters for each position
+              charsToReveal.forEach((idx) => {
+                displayText[idx] = specialChars[Math.floor(Math.random() * specialChars.length)];
+              });
+              element.value = displayText.join("");
+              scrambleIndex++;
+            } else {
+              // Reveal the actual characters
+              charsToReveal.forEach((idx) => {
+                displayText[idx] = text[idx];
+              });
+              element.value = displayText.join("");
+              clearInterval(scrambleInterval);
+              
+              // Move to next batch of characters
+              currentIndex += parallelChars;
+              setTimeout(revealChars, speed);
+            }
+          }, stepDelay);
         };
         
         element.classList.add("typewriter");
-        revealChar();
+        revealChars();
       };
 
       buttons.forEach((button) => {
