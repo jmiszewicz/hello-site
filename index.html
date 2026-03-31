@@ -186,14 +186,17 @@
           <article class="quick-card">
             <h3>od_zera</h3>
             <p>projekt + kod + maksymalna wydajność</p>
+            <button class="cta-button wybieram-btn" type="button" data-service="od_zera">wybieram</button>
           </article>
           <article class="quick-card">
             <h3>na_szablonie</h3>
             <p>dobry balans ceny, czasu i jakości</p>
+            <button class="cta-button wybieram-btn" type="button" data-service="na_szablonie">wybieram</button>
           </article>
           <article class="quick-card">
             <h3>na_start</h3>
             <p>szybkie wejście online i podstawa SEO</p>
+            <button class="cta-button wybieram-btn" type="button" data-service="na_start">wybieram</button>
           </article>
         </div>
         <div class="services-compare">
@@ -841,9 +844,9 @@
       const messageField = document.getElementById("message");
 
       const specialChars = "!@#$%^&*=+-";
-      const decodeSteps = 4; // Number of scrambled versions per character
-      const stepDelay = 40; // ms between each scramble step
-      const parallelChars = 3; // ← ZMIEŃ TĘ LICZBĘ (1, 2, 3, 4, 5...)
+      const decodeSteps = 3; // Number of scrambled versions per character
+      const stepDelay = 4; // ms between each scramble step
+      const parallelChars = 1; // ← ZMIEŃ TĘ LICZBĘ (1, 2, 3, 4, 5...)
       
       const typewriterEffect = (element, text, speed = 60) => {
         element.value = "";
