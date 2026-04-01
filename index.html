@@ -49,13 +49,7 @@
 <body>
   <a href="#main" class="skip-link">Przejdź do głównej treści</a>
   <div class="site-canvas" aria-hidden="true">
-    <div class="site-canvas-veil site-canvas-veil-top"></div>
-    <div class="site-canvas-veil site-canvas-veil-mid"></div>
-    <div class="site-canvas-veil site-canvas-veil-bottom"></div>
-    <div class="site-canvas-grid"></div>
-    <div class="site-canvas-orb site-canvas-orb-a"></div>
-    <div class="site-canvas-orb site-canvas-orb-b"></div>
-    <div class="site-canvas-orb site-canvas-orb-c"></div>
+    <canvas class="site-canvas-network" id="site-canvas-network"></canvas>
   </div>
   <header class="site-header">
     <div class="container header-content">
@@ -177,7 +171,7 @@
         <h2>.usługi {</h2>
         <p class="services-intro">
           Zakres tworzenia stron internetowych dopasowywany jest do budżetu oraz
-          celu projektu - od projektowania i kodowania stron od podstaw, przez
+          celu projektu - od projektowania i kodowania stron od zera, przez
           wdrożenia na&nbsp;bazie szablonów, po rozwiązania ekonomiczne. Każda strona
           internetowa uwzględnia optymalizację SEO oraz zasady UX.
         </p>
@@ -312,10 +306,10 @@
 
           <article class="service-card service-card-main">
             <p class="service-badge">najlepszy efekt</p>
-            <h3>od_podstaw</h3>
+            <h3>od_zera</h3>
             <p class="service-lead">{projekt graficzny + dedykowany kod}</p>
             <p class="service-description">
-              Projektowanie i tworzenie stron internetowych od podstaw - z
+              Projektowanie i tworzenie stron internetowych od zera - z
               indywidualnym projektem dopasowanym do marki oraz czystym kodem
               (HTML, CSS, JavaScript). Bez szablonów i builderów.
             </p>
@@ -330,7 +324,7 @@
               <li>wysoka wydajność i SEO</li>
               <li>pełna skalowalność</li>
             </ul>
-            <button class="cta-button wybieram-btn" type="button" data-service="od_podstaw">wybieram</button>
+            <button class="cta-button wybieram-btn" type="button" data-service="od_zera">wybieram</button>
           </article>
         </div>
         <h2 class="section-close">}</h2>
@@ -348,81 +342,97 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>która_opcja_będzie_najlepsza_dla_mnie</summary>
-            <p>
-              Jeśli zależy Ci na maksymalnej jakości, pełnej swobodzie i
-              indywidualnym projekcie, najlepsza będzie strona od podstaw.
-              Jeśli chcesz szybciej wejść online i zachować dobry balans ceny
-              do jakości, lepszym wyborem będzie opcja na szablonie. Prosta
-              strona internetowa sprawdzi się wtedy, gdy liczy się niski koszt
-              i szybki start.
-            </p>
+            <div class="faq-answer">
+              <p>
+                Jeśli zależy Ci na maksymalnej jakości, pełnej swobodzie i
+                indywidualnym projekcie, najlepsza będzie strona od zera.
+                Jeśli chcesz szybciej wejść online i zachować dobry balans ceny
+                do jakości, lepszym wyborem będzie opcja na szablonie. Prosta
+                strona internetowa sprawdzi się wtedy, gdy liczy się niski koszt
+                i szybki start.
+              </p>
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>czym_różni_się_strona_od_podstaw_od_strony_na_szablonie</summary>
-            <p>
-              Strona od podstaw powstaje na indywidualnym projekcie i
-              dedykowanym kodzie, bez gotowych szablonów i builderów. Daje to
-              większą elastyczność, lepszą skalowalność i najwyższą wydajność.
-              Wersja na szablonie skraca czas realizacji i koszt, opierając się
-              na sprawdzonym rozwiązaniu dopasowanym do Twojej marki.
-            </p>
+            <summary>czym_różni_się_strona_od_zera_od_strony_na_szablonie</summary>
+            <div class="faq-answer">
+              <p>
+                Strona od zera powstaje na indywidualnym projekcie i
+                dedykowanym kodzie, bez gotowych szablonów i builderów. Daje to
+                większą elastyczność, lepszą skalowalność i najwyższą wydajność.
+                Wersja na szablonie skraca czas realizacji i koszt, opierając się
+                na sprawdzonym rozwiązaniu dopasowanym do Twojej marki.
+              </p>
+            </div>
           </details>
 
           <details class="faq-item">
             <summary>czy_prosta_strona_internetowa_też_nadaje_się_na_start_firmy</summary>
-            <p>
-              Tak. To rozwiązanie jest przygotowane właśnie z myślą o szybkiej i
-              budżetowej obecności online. Taka strona zawiera podstawową
-              strukturę, wersję mobilną oraz bazową optymalizację SEO, więc może
-              być dobrym punktem wyjścia do dalszej rozbudowy.
-            </p>
+            <div class="faq-answer">
+              <p>
+                Tak. To rozwiązanie jest przygotowane właśnie z myślą o szybkiej i
+                budżetowej obecności online. Taka strona zawiera podstawową
+                strukturę, wersję mobilną oraz bazową optymalizację SEO, więc może
+                być dobrym punktem wyjścia do dalszej rozbudowy.
+              </p>
+            </div>
           </details>
 
           <details class="faq-item">
             <summary>czy_każda_opcja_zawiera_seo_i_wersję_mobilną</summary>
-            <p>
-              Tak. Niezależnie od wariantu każda strona uwzględnia podstawy SEO
-              technicznego i responsywność. Różnica polega na poziomie
-              dopracowania, elastyczności i możliwościach dalszego rozwoju.
-            </p>
+            <div class="faq-answer">
+              <p>
+                Tak. Niezależnie od wariantu każda strona uwzględnia podstawy SEO
+                technicznego i responsywność. Różnica polega na poziomie
+                dopracowania, elastyczności i możliwościach dalszego rozwoju.
+              </p>
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>czy_strona_od_podstaw_będzie_najszybsza_i_najbardziej_wydajna</summary>
-            <p>
-              Zwykle tak. Strona od podstaw daje największą kontrolę nad kodem,
-              strukturą i optymalizacją, dlatego najlepiej sprawdza się tam,
-              gdzie liczy się wydajność, SEO i dopasowanie do konkretnych potrzeb
-              marki lub biznesu.
-            </p>
+            <summary>czy_strona_od_zera_będzie_najszybsza_i_najbardziej_wydajna</summary>
+            <div class="faq-answer">
+              <p>
+                Zwykle tak. Strona od zera daje największą kontrolę nad kodem,
+                strukturą i optymalizacją, dlatego najlepiej sprawdza się tam,
+                gdzie liczy się wydajność, SEO i dopasowanie do konkretnych potrzeb
+                marki lub biznesu.
+              </p>
+            </div>
           </details>
 
           <details class="faq-item">
             <summary>czy_mogę_zacząć_od_tańszej_opcji_i_później_rozbudować_stronę</summary>
-            <p>
-              Tak. Jeśli na początku najważniejszy jest szybki start, możesz
-              wybrać prostą stronę albo wdrożenie na szablonie, a później
-              rozbudować serwis wraz z rozwojem firmy i większymi potrzebami.
-            </p>
+            <div class="faq-answer">
+              <p>
+                Tak. Jeśli na początku najważniejszy jest szybki start, możesz
+                wybrać prostą stronę albo wdrożenie na szablonie, a później
+                rozbudować serwis wraz z rozwojem firmy i większymi potrzebami.
+              </p>
+            </div>
           </details>
 
           <details class="faq-item">
             <summary>od_czego_zależy_wycena</summary>
-            <p>
-              Wycena zależy głównie od wybranego wariantu, liczby podstron,
-              zakresu projektu, poziomu personalizacji oraz tego, czy strona ma
-              powstać od zera, na szablonie czy w wersji uproszczonej na start.
-            </p>
+            <div class="faq-answer">
+              <p>
+                Wycena zależy głównie od wybranego wariantu, liczby podstron,
+                zakresu projektu, poziomu personalizacji oraz tego, czy strona ma
+                powstać od zera, na szablonie czy w wersji uproszczonej na start.
+              </p>
+            </div>
           </details>
 
           <details class="faq-item">
             <summary>co_jest_potrzebne_żeby_ruszyć_z_realizacją</summary>
-            <p>
-              Na początek wystarczy krótki opis firmy, celu strony, zakresu
-              materiałów i informacji, która opcja najbardziej Cię interesuje.
-              Na tej podstawie łatwo dopasować najlepszy kierunek realizacji.
-            </p>
+            <div class="faq-answer">
+              <p>
+                Na początek wystarczy krótki opis firmy, celu strony, zakresu
+                materiałów i informacji, która opcja najbardziej Cię interesuje.
+                Na tej podstawie łatwo dopasować najlepszy kierunek realizacji.
+              </p>
+            </div>
           </details>
         </div>
         <h2 class="section-close">}</h2>
@@ -437,7 +447,7 @@
         <form class="contact-form" action="https://formspree.io/f/xaqleovl" method="POST">
           <input type="hidden" name="_subject" value="Nowe zapytanie ze strony JM Web">
 
-          <div class="form-grid">
+          <div class="form-grid form-grid-primary">
             <div class="form-field">
               <input
                 id="name"
@@ -463,44 +473,46 @@
               >
               <label for="email">_email</label>
             </div>
+          </div>
 
+          <div class="contact-form-followup">
             <div class="form-field form-field-full">
               <textarea id="message" name="message" rows="5" placeholder=" " aria-required="false"></textarea>
               <label for="message">_treść_(opcjonalnie)</label>
             </div>
+
+            <input
+              class="honeycomb"
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="new-password"
+              autocapitalize="off"
+              spellcheck="false"
+              aria-hidden="true"
+            >
+
+            <div class="form-meta">
+              <p class="legal-note">
+                Administratorem danych jest Jakub Miszewicz.
+                Dane z formularza przetwarzam w celu odpowiedzi na zapytanie ofertowe.
+                Pełna informacja o przetwarzaniu danych (podstawa prawna, odbiorcy,
+                transfery, okres przechowywania i Twoje prawa) znajduje się w
+                <a href="/polityka-prywatnosci.html">Polityce prywatności</a>.
+              </p>
+
+              <label class="consent">
+                <input type="checkbox" name="privacy_notice_ack" required>
+                <span>
+                  Potwierdzam, że zapoznałem(-am) się z
+                  <a href="/polityka-prywatnosci.html">Polityką prywatności</a>
+                  oraz klauzulą informacyjną.
+                </span>
+              </label>
+            </div>
+
+            <button class="cta-button form-submit" type="submit">Wyślij zapytanie</button>
           </div>
-
-          <input
-            class="honeycomb"
-            type="text"
-            name="_gotcha"
-            tabindex="-1"
-            autocomplete="new-password"
-            autocapitalize="off"
-            spellcheck="false"
-            aria-hidden="true"
-          >
-
-          <div class="form-meta">
-            <p class="legal-note">
-              Administratorem danych jest Jakub Miszewicz.
-              Dane z formularza przetwarzam w celu odpowiedzi na zapytanie ofertowe.
-              Pełna informacja o przetwarzaniu danych (podstawa prawna, odbiorcy,
-              transfery, okres przechowywania i Twoje prawa) znajduje się w
-              <a href="/polityka-prywatnosci.html">Polityce prywatności</a>.
-            </p>
-
-            <label class="consent">
-              <input type="checkbox" name="privacy_notice_ack" required>
-              <span>
-                Potwierdzam, że zapoznałem(-am) się z
-                <a href="/polityka-prywatnosci.html">Polityką prywatności</a>
-                oraz klauzulą informacyjną.
-              </span>
-            </label>
-          </div>
-
-          <button class="cta-button form-submit" type="submit">Wyślij zapytanie</button>
         </form>
         <h2 class="section-close">}</h2>
       </div>
@@ -556,29 +568,167 @@
   <script>
     (function () {
       const root = document.documentElement;
+      const canvas = document.getElementById("site-canvas-network");
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const ctx = canvas ? canvas.getContext("2d") : null;
+      const planes = [
+        {
+          ratio: 0.44,
+          sizeMin: 1.1,
+          sizeMax: 2.1,
+          opacityMin: 0.16,
+          opacityMax: 0.34,
+          shiftFactor: 0.18,
+          driftFactor: 0.34,
+          distance: 104,
+          lineAlpha: 0.05,
+          lineWidth: 0.72,
+          blur: 1.15,
+          idleX: 0.7,
+          idleY: 1.1
+        },
+        {
+          ratio: 0.34,
+          sizeMin: 1.6,
+          sizeMax: 2.8,
+          opacityMin: 0.22,
+          opacityMax: 0.44,
+          shiftFactor: 0.4,
+          driftFactor: 0.76,
+          distance: 136,
+          lineAlpha: 0.085,
+          lineWidth: 0.9,
+          blur: 0.45,
+          idleX: 1.15,
+          idleY: 1.8
+        },
+        {
+          ratio: 0.22,
+          sizeMin: 2.1,
+          sizeMax: 3.9,
+          opacityMin: 0.3,
+          opacityMax: 0.62,
+          shiftFactor: 0.82,
+          driftFactor: 1.2,
+          distance: 168,
+          lineAlpha: 0.13,
+          lineWidth: 1.05,
+          blur: 0,
+          idleX: 1.9,
+          idleY: 2.8
+        }
+      ];
+      const layerPadding = 220;
+      const minFrameMs = 33;
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+      let lastFrameTime = 0;
+      let pointColor = "255, 255, 255";
+      let lineColor = "255, 255, 255";
+      let layers = [];
       let rafId = 0;
       let currentShift = 0;
       let currentDrift = 0;
-      let currentProgress = 0;
       let targetShift = 0;
       let targetDrift = 0;
-      let targetProgress = 0;
 
-      const setCanvasVars = (progress, shift, drift) => {
-        root.style.setProperty("--scroll-progress", progress.toFixed(4));
-        root.style.setProperty("--scroll-shift", `${shift.toFixed(2)}px`);
-        root.style.setProperty("--scroll-drift", `${drift.toFixed(2)}px`);
+      if (!canvas || !ctx) return;
+
+      const readPalette = () => {
+        const styles = getComputedStyle(root);
+        pointColor = styles.getPropertyValue("--particle-rgb").trim() || "255, 255, 255";
+        lineColor = styles.getPropertyValue("--particle-line-rgb").trim() || pointColor;
+      };
+
+      const createParticle = (plane) => {
+        const bias = 0.82 + Math.random() * 0.36;
+
+        return {
+          x: Math.random() * (width + layerPadding * 2),
+          y: Math.random() * (height + layerPadding * 2),
+          size: plane.sizeMin + Math.random() * (plane.sizeMax - plane.sizeMin),
+          opacity: plane.opacityMin + Math.random() * (plane.opacityMax - plane.opacityMin),
+          bias
+        };
+      };
+
+      const buildLayers = () => {
+        const totalCount = width >= 1320 ? 82 : width >= 960 ? 64 : width >= 640 ? 48 : 34;
+
+        layers = planes.map((plane) => {
+          const planeCount = Math.max(4, Math.round(totalCount * plane.ratio));
+          const layerCanvas = document.createElement("canvas");
+          const layerCtx = layerCanvas.getContext("2d");
+          const layerWidth = width + layerPadding * 2;
+          const layerHeight = height + layerPadding * 2;
+          const particles = Array.from({ length: planeCount }, () => createParticle(plane));
+
+          layerCanvas.width = Math.round(layerWidth * dpr);
+          layerCanvas.height = Math.round(layerHeight * dpr);
+          layerCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          layerCtx.lineCap = "round";
+          layerCtx.filter = plane.blur > 0 ? `blur(${plane.blur}px)` : "none";
+
+          const maxDistanceSq = plane.distance * plane.distance;
+
+          for (let i = 0; i < particles.length; i += 1) {
+            const a = particles[i];
+
+            for (let j = i + 1; j < particles.length; j += 1) {
+              const b = particles[j];
+              const dx = a.x - b.x;
+              const dy = a.y - b.y;
+              const distanceSq = dx * dx + dy * dy;
+
+              if (distanceSq > maxDistanceSq) continue;
+
+              const alpha = Math.pow(1 - distanceSq / maxDistanceSq, 1.8) * plane.lineAlpha;
+              layerCtx.strokeStyle = `rgba(${lineColor}, ${alpha})`;
+              layerCtx.lineWidth = plane.lineWidth;
+              layerCtx.beginPath();
+              layerCtx.moveTo(a.x, a.y);
+              layerCtx.lineTo(b.x, b.y);
+              layerCtx.stroke();
+            }
+          }
+
+          particles.forEach((particle) => {
+            layerCtx.fillStyle = `rgba(${pointColor}, ${particle.opacity})`;
+            layerCtx.beginPath();
+            layerCtx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            layerCtx.fill();
+          });
+
+          layerCtx.filter = "none";
+
+          return {
+            plane,
+            canvas: layerCanvas,
+            width: layerWidth,
+            height: layerHeight
+          };
+        });
+      };
+
+      const resizeCanvas = () => {
+        dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        buildLayers();
       };
 
       const readTargets = () => {
         const scrollTop = window.scrollY || window.pageYOffset;
-        const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
-        const progress = Math.min(scrollTop / maxScroll, 1);
-
-        targetProgress = progress;
-        targetShift = scrollTop * 0.52;
-        targetDrift = Math.sin(progress * Math.PI * 2) * 46;
+        targetShift = reduceMotion.matches ? 0 : scrollTop * -0.15;
+        targetDrift = reduceMotion.matches ? 0 : Math.sin(scrollTop * 0.0021) * 14;
       };
 
       const stopLoop = () => {
@@ -587,55 +737,96 @@
         rafId = 0;
       };
 
-      const animateCanvas = () => {
-        const ease = 0.075;
+      const drawNetwork = (time = 0) => {
+        ctx.clearRect(0, 0, width, height);
 
-        currentProgress += (targetProgress - currentProgress) * ease;
+        layers.forEach((layer, planeIndex) => {
+          const idleX = reduceMotion.matches
+            ? 0
+            : Math.sin(time * 0.00022 + planeIndex * 1.37) * layer.plane.idleX;
+          const idleY = reduceMotion.matches
+            ? 0
+            : Math.cos(time * 0.00017 + planeIndex * 1.11) * layer.plane.idleY;
+          const x = -layerPadding + currentDrift * layer.plane.driftFactor + idleX;
+          const y = -layerPadding + currentShift * layer.plane.shiftFactor + idleY;
+          ctx.drawImage(layer.canvas, x, y, layer.width, layer.height);
+        });
+      };
+
+      const animateCanvas = (time) => {
+        if (time - lastFrameTime < minFrameMs) {
+          rafId = window.requestAnimationFrame(animateCanvas);
+          return;
+        }
+
+        lastFrameTime = time;
+        const ease = 0.14;
+
         currentShift += (targetShift - currentShift) * ease;
         currentDrift += (targetDrift - currentDrift) * ease;
 
-        setCanvasVars(currentProgress, currentShift, currentDrift);
-
-        const settled =
-          Math.abs(targetProgress - currentProgress) < 0.0005 &&
-          Math.abs(targetShift - currentShift) < 0.35 &&
-          Math.abs(targetDrift - currentDrift) < 0.35;
-
-        if (settled) {
-          currentProgress = targetProgress;
-          currentShift = targetShift;
-          currentDrift = targetDrift;
-          setCanvasVars(currentProgress, currentShift, currentDrift);
-          rafId = 0;
-          return;
-        }
+        drawNetwork(time);
 
         rafId = window.requestAnimationFrame(animateCanvas);
       };
 
-      const requestTick = () => {
+      const startLoop = () => {
+        if (rafId) return;
+        lastFrameTime = 0;
+        rafId = window.requestAnimationFrame(animateCanvas);
+      };
+
+      const renderStaticFrame = () => {
+        currentShift = targetShift;
+        currentDrift = targetDrift;
+        drawNetwork(0);
+      };
+
+      const syncMotionMode = () => {
         if (reduceMotion.matches) {
           stopLoop();
-          currentProgress = 0;
           currentShift = 0;
           currentDrift = 0;
-          targetProgress = 0;
           targetShift = 0;
           targetDrift = 0;
-          setCanvasVars(0, 0, 0);
+          renderStaticFrame();
           return;
         }
 
-        readTargets();
-
-        if (rafId) return;
-        rafId = window.requestAnimationFrame(animateCanvas);
+        startLoop();
       };
 
-      requestTick();
-      window.addEventListener("scroll", requestTick, { passive: true });
-      window.addEventListener("resize", requestTick);
-      reduceMotion.addEventListener("change", requestTick);
+      readPalette();
+      resizeCanvas();
+      readTargets();
+      syncMotionMode();
+
+      const paletteObserver = new MutationObserver(() => {
+        readPalette();
+        buildLayers();
+        if (reduceMotion.matches) renderStaticFrame();
+        else startLoop();
+      });
+
+      paletteObserver.observe(root, {
+        attributes: true,
+        attributeFilter: ["data-theme"]
+      });
+
+      window.addEventListener("scroll", () => {
+        readTargets();
+        if (!reduceMotion.matches) startLoop();
+      }, { passive: true });
+      window.addEventListener("resize", () => {
+        resizeCanvas();
+        readTargets();
+        if (reduceMotion.matches) {
+          renderStaticFrame();
+          return;
+        }
+        startLoop();
+      });
+      reduceMotion.addEventListener("change", syncMotionMode);
     })();
   </script>
   <script>
@@ -723,10 +914,8 @@
         ".faq .section-close",
         ".contact h2",
         ".contact-content > p",
-        ".form-field",
-        ".legal-note",
-        ".consent",
-        ".form-submit",
+        ".form-grid-primary",
+        ".contact-form-followup",
         ".contact .section-close"
       ];
       const items = document.querySelectorAll(selectors.join(", "));
@@ -751,6 +940,17 @@
       );
 
       items.forEach((item) => observer.observe(item));
+
+      document.querySelectorAll(".contact-form").forEach((form) => {
+        const followup = form.querySelector(".contact-form-followup");
+
+        if (!followup) return;
+
+        form.addEventListener("focusin", () => {
+          followup.classList.add("is-visible");
+          observer.unobserve(followup);
+        });
+      });
     })();
   </script>
   <script>
@@ -839,7 +1039,7 @@
     })();
   </script>
   <script>
-        (function () {
+    (function () {
       const buttons = document.querySelectorAll(".wybieram-btn");
       const messageField = document.getElementById("message");
 
@@ -915,6 +1115,88 @@
       });
     })();
   </script>
+  <script>
+    (function () {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      if (!faqItems.length) return;
+
+      const setExpandedState = (item, answer, expanded) => {
+        item.classList.remove("is-animating", "is-closing");
+        if (expanded) {
+          answer.style.height = "auto";
+        } else {
+          answer.style.height = "0px";
+        }
+      };
+
+      faqItems.forEach((item) => {
+        const summary = item.querySelector("summary");
+        const answer = item.querySelector(".faq-answer");
+
+        if (!summary || !answer) return;
+
+        if (item.open) {
+          setExpandedState(item, answer, true);
+        } else {
+          setExpandedState(item, answer, false);
+        }
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const isOpen = item.hasAttribute("open");
+
+          if (reduceMotion.matches) {
+            item.classList.remove("is-animating", "is-closing");
+            item.toggleAttribute("open", !isOpen);
+            answer.style.height = !isOpen ? "auto" : "0px";
+            return;
+          }
+
+          if (!isOpen) {
+            item.classList.remove("is-closing");
+            item.classList.add("is-animating");
+            item.setAttribute("open", "");
+            answer.style.height = "0px";
+
+            window.requestAnimationFrame(() => {
+              answer.style.height = `${answer.scrollHeight}px`;
+            });
+
+            const onOpenEnd = (transitionEvent) => {
+              if (transitionEvent.propertyName !== "height") return;
+              answer.style.height = "auto";
+              item.classList.remove("is-animating");
+              answer.removeEventListener("transitionend", onOpenEnd);
+            };
+
+            answer.addEventListener("transitionend", onOpenEnd);
+            return;
+          }
+
+          item.classList.add("is-closing");
+          item.classList.remove("is-animating");
+          answer.style.height = `${answer.scrollHeight}px`;
+          void answer.offsetHeight;
+
+          window.requestAnimationFrame(() => {
+            answer.style.height = "0px";
+          });
+
+          const onCloseEnd = (transitionEvent) => {
+            if (transitionEvent.propertyName !== "height") return;
+            item.removeAttribute("open");
+            item.classList.remove("is-closing");
+            answer.removeEventListener("transitionend", onCloseEnd);
+          };
+
+          answer.addEventListener("transitionend", onCloseEnd);
+        });
+      });
+    })();
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -970,15 +1252,15 @@
           "name": "Która opcja będzie najlepsza dla mnie?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Strona od podstaw będzie najlepsza przy maksymalnej jakości i pełnej swobodzie. Opcja na szablonie daje dobry balans ceny, czasu i jakości. Prosta strona internetowa sprawdzi się przy niskim koszcie i szybkim starcie."
+            "text": "Strona od zera będzie najlepsza przy maksymalnej jakości i pełnej swobodzie. Opcja na szablonie daje dobry balans ceny, czasu i jakości. Prosta strona internetowa sprawdzi się przy niskim koszcie i szybkim starcie."
           }
         },
         {
           "@type": "Question",
-          "name": "Czym różni się strona od podstaw od strony na szablonie?",
+          "name": "Czym różni się strona od zera od strony na szablonie?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Strona od podstaw powstaje na indywidualnym projekcie i dedykowanym kodzie, co daje większą elastyczność, skalowalność i wydajność. Strona na szablonie skraca czas wdrożenia i obniża koszt, opierając się na sprawdzonym rozwiązaniu."
+            "text": "Strona od zera powstaje na indywidualnym projekcie i dedykowanym kodzie, co daje większą elastyczność, skalowalność i wydajność. Strona na szablonie skraca czas wdrożenia i obniża koszt, opierając się na sprawdzonym rozwiązaniu."
           }
         },
         {
@@ -999,7 +1281,7 @@
         },
         {
           "@type": "Question",
-          "name": "Czy strona od podstaw będzie najszybsza i najbardziej wydajna?",
+          "name": "Czy strona od zera będzie najszybsza i najbardziej wydajna?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Zwykle tak, ponieważ indywidualny projekt i dedykowany kod dają największą kontrolę nad optymalizacją, wydajnością i SEO."
