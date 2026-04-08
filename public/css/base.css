@@ -3,7 +3,7 @@
   --bp-sm: 640px;
   --bp-md: 860px;
   --bp-lg: 1100px;
-  --header-height: 88px;
+  --header-height: 82px;
   --bg: #111418;
   --text: #f5f7fa;
   --muted: #a8b1bc;
@@ -118,4 +118,10 @@ img {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@media (max-width: 860px) {
+  :root {
+    --header-height: 76px;
+  }
 }

@@ -182,18 +182,13 @@
 /* Offer section */
 .services-compare {
   padding: clamp(1rem, 2vw, 1.35rem);
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-lg);
 }
 
 .services-compare-header {
   display: grid;
   gap: 0.45rem;
   margin-bottom: 1rem;
-}
-
-.services-compare-header p {
-  margin: 0;
-  color: var(--muted);
 }
 
 .services-compare-header h3 {
@@ -247,9 +242,16 @@
   font-weight: 700;
 }
 
+.services-plan-heading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .services-plan-badge {
   display: inline-flex;
-  margin-top: 0.45rem;
   padding: 0.25rem 0.6rem;
   border: 1px solid rgba(79, 111, 145, 0.25);
   border-radius: var(--radius-pill);
@@ -303,8 +305,16 @@
   gap: 0.45rem;
 }
 
-.services-cta {
-  margin: 0 0 var(--space-lg);
+.services-compare-note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.services-note-link {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .services-grid {
@@ -315,17 +325,12 @@
 }
 
 .service-card {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr auto;
   gap: 0.9rem;
   padding: 1.4rem;
   height: 100%;
-}
-
-.service-card-no-label::before {
-  content: "";
-  display: block;
-  min-height: 1.85rem;
 }
 
 .service-card-featured {
@@ -333,9 +338,18 @@
   background: var(--surface-soft);
 }
 
+.service-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2rem;
+}
+
 .service-badge {
+  flex-shrink: 0;
   width: fit-content;
-  margin: 0 0 0.3rem 0;
+  margin: 0;
   padding: 0.28rem 0.65rem;
   border-radius: var(--radius-pill);
   background: rgba(79, 111, 145, 0.1);
@@ -347,6 +361,7 @@
 .service-card h3 {
   margin: 0;
   font-size: 1.3rem;
+  line-height: 1.2;
 }
 
 .service-lead {
@@ -361,7 +376,7 @@
 }
 
 .service-points {
-  margin: 0 0 auto;
+  margin: 0;
   padding-left: 1.1rem;
   color: var(--text);
 }
@@ -381,7 +396,7 @@
 
 .process-note {
   display: inline-block;
-  margin-left: 0.35rem;
+  margin-left: 0;
 }
 
 .process-timeline {
@@ -849,14 +864,14 @@
 @media (max-width: 860px) {
   .hero {
     min-height: calc(100dvh - 76px);
-    padding-top: clamp(3.5rem, 14vw, 5.5rem);
-    padding-bottom: clamp(2.5rem, 10vw, 4.25rem);
+    padding-top: clamp(4.5rem, 18vw, 6.5rem);
+    padding-bottom: clamp(3.25rem, 12vw, 5rem);
     align-items: center;
   }
 
   .hero-content {
     max-width: none;
-    gap: 1.1rem;
+    gap: 1.3rem;
   }
 
   .hero h1 {
@@ -869,6 +884,16 @@
     max-width: 34ch;
   }
 
+  .process-timeline::before {
+    top: 7.5rem;
+    bottom: 4.5rem;
+  }
+
+  .service-card-heading {
+    flex-wrap: wrap;
+    min-height: 0;
+  }
+
   .process-note {
     display: block;
     margin-top: 0.25rem;
@@ -879,6 +904,8 @@
 @media (max-width: 640px) {
   .hero {
     min-height: calc(100dvh - 72px);
+    padding-top: clamp(5rem, 22vw, 7rem);
+    padding-bottom: clamp(3.5rem, 14vw, 5.25rem);
   }
 
   .services-matrix {
