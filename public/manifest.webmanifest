@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "jmiszewicz - strony internetowe i SEO",
+  "name": "jmiszewicz - strony internetowe dla firm",
   "short_name": "jmiszewicz",
-  "description": "Tworzenie nowoczesnych stron internetowych, optymalizacja SEO i Core Web Vitals",
+  "description": "Strony internetowe dla firm, które budują zaufanie, porządkują ofertę i pomagają zdobywać zapytania.",
   "start_url": "/",
   "scope": "/",
   "icons": [
@@ -19,8 +19,8 @@
       "purpose": "any"
     }
   ],
-  "theme_color": "#141414",
-  "background_color": "#141414",
+  "theme_color": "#111418",
+  "background_color": "#111418",
   "display": "minimal-ui",
   "categories": ["business", "services"]
 }

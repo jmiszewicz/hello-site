@@ -1,0 +1,39 @@
+{
+  "relations": [
+    {
+      "from": "Jakub Miszewicz",
+      "to": "jmiszewicz",
+      "type": "owner"
+    },
+    {
+      "from": "jmiszewicz",
+      "to": "Strona od zera",
+      "type": "provides_service"
+    },
+    {
+      "from": "jmiszewicz",
+      "to": "Strona na szablonie",
+      "type": "provides_service"
+    },
+    {
+      "from": "jmiszewicz",
+      "to": "Strona na start",
+      "type": "provides_service"
+    },
+    {
+      "from": "jmiszewicz",
+      "to": "Polska",
+      "type": "operates_in"
+    },
+    {
+      "from": "jmiszewicz",
+      "to": "Lubuskie",
+      "type": "operates_in"
+    },
+    {
+      "from": "jmiszewicz",
+      "to": "Zielona Góra",
+      "type": "operates_in"
+    }
+  ]
+}

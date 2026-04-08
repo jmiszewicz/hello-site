@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "name": "jmiszewicz.com AI metadata",
+  "description": "Zestaw plików opisujących strukturę, treść i kontekst strony dla systemów AI.",
+  "root": "https://jmiszewicz.com/",
+  "files": {
+    "llm": {
+      "path": "/ai/llm.json",
+      "description": "Opis strony i kontekst biznesowy"
+    },
+    "entities": {
+      "path": "/ai/entities.json",
+      "description": "Encje: firma, osoba, usługi, lokalizacja"
+    },
+    "intent": {
+      "path": "/ai/intent.json",
+      "description": "Cel strony i działania użytkownika"
+    },
+    "content_map": {
+      "path": "/ai/content_map.json",
+      "description": "Mapa sekcji i ich funkcji"
+    },
+    "relations": {
+      "path": "/ai/relations.json",
+      "description": "Relacje między encjami"
+    },
+    "schema": {
+      "path": "/ai/schema.json",
+      "description": "Struktura strony i nawigacja"
+    },
+    "technical": {
+      "path": "/ai/technical.json",
+      "description": "Informacje techniczne o stronie"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "name": "jmiszewicz",
+  "description": "Strony internetowe dla firm, które budują zaufanie, porządkują ofertę i pomagają zdobywać zapytania.",
+  "url": "https://jmiszewicz.com/",
+  "resources": {
+    "index": "https://jmiszewicz.com/ai/index.json",
+    "llm": "https://jmiszewicz.com/ai/llm.json",
+    "entities": "https://jmiszewicz.com/ai/entities.json",
+    "intent": "https://jmiszewicz.com/ai/intent.json",
+    "content_map": "https://jmiszewicz.com/ai/content_map.json",
+    "relations": "https://jmiszewicz.com/ai/relations.json",
+    "schema": "https://jmiszewicz.com/ai/schema.json",
+    "technical": "https://jmiszewicz.com/ai/technical.json"
+  }
+}

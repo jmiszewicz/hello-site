@@ -1,0 +1,33 @@
+{
+  "sections": [
+    {
+      "name": "hero",
+      "goal": "przyciągnięcie uwagi"
+    },
+    {
+      "name": "wprowadzenie",
+      "goal": "budowa zaufania"
+    },
+    {
+      "name": "oferta",
+      "goal": "sprzedaż"
+    },
+    {
+      "name": "proces",
+      "goal": "wyjaśnienie współpracy"
+    },
+    {
+      "name": "faq",
+      "goal": "redukcja obiekcji"
+    },
+    {
+      "name": "kontakt",
+      "goal": "konwersja"
+    }
+  ],
+  "content_types": {
+    "text": "krótki, konkretny",
+    "images": "dekoracyjne",
+    "video": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "entities": [
+    {
+      "name": "jmiszewicz",
+      "type": "organization",
+      "description": "Usługa projektowania i wdrażania stron internetowych dla firm, z naciskiem na wydajność, SEO i konwersję."
+    },
+    {
+      "name": "Jakub Miszewicz",
+      "type": "person",
+      "role": "właściciel, developer",
+      "description": "Projektant i wykonawca stron internetowych, działający w sposób logiczny, nastawiony na efektywność i realne cele biznesowe."
+    },
+    {
+      "name": "Strona od zera",
+      "type": "service",
+      "description": "Indywidualne projektowanie i wdrożenie strony internetowej z pełną kontrolą nad funkcjonalnością i wydajnością."
+    },
+    {
+      "name": "Strona na szablonie",
+      "type": "service",
+      "description": "Szybsze wdrożenie strony internetowej przy zachowaniu dobrej jakości i niższego czasu realizacji."
+    },
+    {
+      "name": "Strona na start",
+      "type": "service",
+      "description": "Prosta i szybka strona internetowa dla klientów z ograniczonym budżetem i pilną potrzebą obecności online."
+    },
+    {
+      "name": "Polska",
+      "type": "location"
+    },
+    {
+      "name": "Lubuskie",
+      "type": "location"
+    },
+    {
+      "name": "Zielona Góra",
+      "type": "location"
+    }
+  ]
+}

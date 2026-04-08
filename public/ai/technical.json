@@ -1,0 +1,15 @@
+{
+  "stack": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "architecture": "static site",
+  "cms": false,
+  "hosting": "Cloudflare Pages",
+  "repository": "GitHub",
+  "performance": {
+    "type": "lekka strona",
+    "animations": "minimalne (np. fade-in)"
+  }
+}

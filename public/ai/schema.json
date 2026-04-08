@@ -1,0 +1,37 @@
+{
+  "site_type": "one-page",
+  "navigation": [
+    {
+      "name": "Start",
+      "url": "https://jmiszewicz.com/#start"
+    },
+    {
+      "name": "Wprowadzenie",
+      "url": "https://jmiszewicz.com/#intro"
+    },
+    {
+      "name": "Oferta",
+      "url": "https://jmiszewicz.com/#offer"
+    },
+    {
+      "name": "Proces",
+      "url": "https://jmiszewicz.com/#process"
+    },
+    {
+      "name": "FAQ",
+      "url": "https://jmiszewicz.com/#faq"
+    },
+    {
+      "name": "Kontakt",
+      "url": "https://jmiszewicz.com/#contact"
+    }
+  ],
+  "sections": [
+    "start",
+    "wprowadzenie",
+    "oferta",
+    "proces",
+    "faq",
+    "kontakt"
+  ]
+}

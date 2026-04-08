@@ -1,0 +1,16 @@
+{
+  "primary_goal": "konwersja",
+  "conversion_type": "kontakt",
+  "main_conversion": "wypełnienie formularza kontaktowego",
+  "user_actions": [
+    "wysłanie formularza",
+    "kontakt telefoniczny"
+  ],
+  "target_audience": {
+    "segment": "małe i średnie firmy",
+    "industries": "różne branże",
+    "awareness_level": "średni i wysoki",
+    "intent": "rozwój biznesu poprzez obecność online"
+  },
+  "problem_solved": "Projektowanie stron dopasowanych do realnych potrzeb biznesowych, z naciskiem na sprzedaż i intuicyjne prowadzenie użytkownika, który nie ma wiedzy technicznej."
+}
