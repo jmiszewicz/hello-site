@@ -4,8 +4,18 @@
   const mobileBtn = document.getElementById("theme-toggle-mobile");
   const menuBtn = document.getElementById("menu-toggle");
   const siteNav = document.getElementById("site-nav");
+  const siteHeader = document.querySelector(".site-header");
   const navLinks = siteNav ? Array.from(siteNav.querySelectorAll('a[href^="#"]')) : [];
   const storedTheme = localStorage.getItem("theme");
+
+  const syncHeaderHeight = () => {
+    if (!siteHeader) return;
+
+    const navIsOpen = siteNav && siteNav.classList.contains("is-open") && window.innerWidth <= 860;
+    if (navIsOpen) return;
+
+    root.style.setProperty("--header-height", `${Math.ceil(siteHeader.getBoundingClientRect().height)}px`);
+  };
 
   if (storedTheme === "light") {
     root.setAttribute("data-theme", "light");
@@ -45,15 +55,23 @@
     });
   }
 
+  syncHeaderHeight();
+  window.addEventListener("load", syncHeaderHeight);
+
   if (menuBtn && siteNav) {
     const closeMenu = () => {
       siteNav.classList.remove("is-open");
       menuBtn.setAttribute("aria-expanded", "false");
+      window.requestAnimationFrame(syncHeaderHeight);
     };
 
     menuBtn.addEventListener("click", function () {
       const isOpen = siteNav.classList.toggle("is-open");
       menuBtn.setAttribute("aria-expanded", String(isOpen));
+
+      if (!isOpen) {
+        window.requestAnimationFrame(syncHeaderHeight);
+      }
     });
 
     siteNav.querySelectorAll("a").forEach((link) => {
@@ -64,6 +82,8 @@
       if (window.innerWidth > 860) {
         closeMenu();
       }
+
+      window.requestAnimationFrame(syncHeaderHeight);
     });
   }
 
@@ -87,8 +107,7 @@
     };
 
     const updateActiveLink = () => {
-      const header = document.querySelector(".site-header");
-      const headerHeight = header ? header.offsetHeight : 0;
+      const headerHeight = siteHeader ? siteHeader.offsetHeight : 0;
       const marker = window.scrollY + headerHeight + window.innerHeight * 0.18;
       let activeId = sections[0].section.id;
 
@@ -128,5 +147,6 @@
     updateActiveLink();
     window.addEventListener("scroll", requestUpdateActiveLink, { passive: true });
     window.addEventListener("resize", requestUpdateActiveLink);
+    window.addEventListener("load", requestUpdateActiveLink);
   }
 })();

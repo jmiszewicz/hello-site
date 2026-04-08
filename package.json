@@ -1,0 +1,9 @@
+{
+  "name": "hello-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static marketing site for jmiszewicz.com",
+  "scripts": {
+    "build": "echo \"Static site - no build step required\""
+  }
+}

@@ -3,6 +3,7 @@
   --bp-sm: 640px;
   --bp-md: 860px;
   --bp-lg: 1100px;
+  --header-height: 88px;
   --bg: #111418;
   --text: #f5f7fa;
   --muted: #a8b1bc;
@@ -56,7 +57,7 @@ html {
 }
 
 section[id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 /* Base document styles */
@@ -66,6 +67,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
+  padding-top: var(--header-height);
   overflow-x: hidden;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
