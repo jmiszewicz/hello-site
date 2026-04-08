@@ -77,6 +77,19 @@ a {
   text-decoration: none;
 }
 
+a,
+button,
+input,
+textarea,
+select,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 img {
   max-width: 100%;
 }

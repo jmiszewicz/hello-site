@@ -1,54 +1,25 @@
 (function () {
   const buttons = document.querySelectorAll(".wybieram-btn");
   const messageField = document.getElementById("message");
-
-  const specialChars = "!@#$%^&*=+-";
-  const decodeSteps = 3;
-  const stepDelay = 4;
-  const parallelChars = 1;
+  let typingIntervalId = null;
 
   const typewriterEffect = (element, text, speed = 60) => {
+    if (typingIntervalId) {
+      clearInterval(typingIntervalId);
+    }
+
     element.value = "";
-    element.classList.remove("typewriter");
-
     let currentIndex = 0;
-    const displayText = [];
 
-    const revealChars = () => {
-      const charsToReveal = [];
-      for (let i = 0; i < parallelChars && currentIndex + i < text.length; i += 1) {
-        charsToReveal.push(currentIndex + i);
+    typingIntervalId = setInterval(() => {
+      currentIndex += 1;
+      element.value = text.slice(0, currentIndex);
+
+      if (currentIndex >= text.length) {
+        clearInterval(typingIntervalId);
+        typingIntervalId = null;
       }
-
-      if (charsToReveal.length === 0) {
-        element.classList.remove("typewriter");
-        return;
-      }
-
-      let scrambleIndex = 0;
-
-      const scrambleInterval = setInterval(() => {
-        if (scrambleIndex < decodeSteps) {
-          charsToReveal.forEach((idx) => {
-            displayText[idx] = specialChars[Math.floor(Math.random() * specialChars.length)];
-          });
-          element.value = displayText.join("");
-          scrambleIndex += 1;
-        } else {
-          charsToReveal.forEach((idx) => {
-            displayText[idx] = text[idx];
-          });
-          element.value = displayText.join("");
-          clearInterval(scrambleInterval);
-
-          currentIndex += parallelChars;
-          setTimeout(revealChars, speed);
-        }
-      }, stepDelay);
-    };
-
-    element.classList.add("typewriter");
-    revealChars();
+    }, speed);
   };
 
   buttons.forEach((button) => {

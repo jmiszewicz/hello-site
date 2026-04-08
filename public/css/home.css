@@ -111,6 +111,10 @@
   color: var(--muted);
 }
 
+.desktop-break {
+  display: inline;
+}
+
 /* Intro section */
 .intro-grid {
   display: grid;
@@ -708,16 +712,6 @@
 }
 
 /* Modal and reveal animations */
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes fade-up-in {
   from {
     opacity: 0;
@@ -728,11 +722,6 @@
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
-}
-
-#message.typewriter {
-  white-space: pre-wrap;
-  overflow: hidden;
 }
 
 .form-modal {
@@ -837,6 +826,10 @@
 }
 
 @media (min-width: 980px) {
+  .desktop-break {
+    display: block;
+  }
+
   .intro-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
